@@ -1064,7 +1064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756369847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.5, z: 0}
+  m_LocalPosition: {x: -23.32, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1524,8 +1524,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 1
-  baseShootSpeed: 0.01
-  baseSpeed: 4
+  baseShootSpeed: 0.4
+  baseSpeed: 5
   userControl: 1
 --- !u!50 &1028864223
 Rigidbody2D:
@@ -1563,7 +1563,7 @@ MonoBehaviour:
   bulletRef: {fileID: 2125550378610843252, guid: d53e81b4e3cb1da43826378242f434e8, type: 3}
   spreadAngle: 0.26179168
   cooldown: 1
-  projectileSpeed: 12
+  projectileSpeed: 9.5
   targetTeam:
   - enemy
 --- !u!114 &1028864226
