@@ -10,6 +10,7 @@ public class HealthScript : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        this.gameObject.tag = "healthbody";
     }
 
     public int TakeDamage(int amount)
