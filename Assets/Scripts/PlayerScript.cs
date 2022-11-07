@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour
         body.velocity = moveDirection * baseSpeed;
         if (attemptShoot)
         {
-            if(gun.Shoot(shootDirection, 1))
+            if(gun.Shoot(shootDirection, baseDamage, 1))
             {
                 gun.Reload(baseShootSpeed);
             }

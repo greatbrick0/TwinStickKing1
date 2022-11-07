@@ -21,7 +21,7 @@ public class GunScript : MonoBehaviour
         cooldownTime -= 1.0f * Time.deltaTime;
     }
 
-    public bool Shoot(Vector2 mainDirection, int sprayAmount)
+    public bool Shoot(Vector2 mainDirection, int damageArg, int sprayAmount)
     {
         GameObject newBullet;
         mainDirection.Normalize();
@@ -39,7 +39,7 @@ public class GunScript : MonoBehaviour
                 newBullet.GetComponent<BulletScript>().direction = mainDirection + offset;
                 newBullet.GetComponent<BulletScript>().speed = projectileSpeed;
                 newBullet.GetComponent<BulletScript>().targetTeam = targetTeam;
-                newBullet.GetComponent<BulletScript>().damage = 1;
+                newBullet.GetComponent<BulletScript>().damage = damageArg;
             }
             return true;
         }

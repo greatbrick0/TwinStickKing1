@@ -1523,7 +1523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748699214dc0b454a915947f7d115c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 1
+  baseDamage: 2
   baseShootSpeed: 0.4
   baseSpeed: 5
   userControl: 1

@@ -16,14 +16,12 @@ public class HealthScript : MonoBehaviour
     public int TakeDamage(int amount)
     {
         health -= amount;
-        if(amount > health)
+        if(health < 0)
         {
-            health = 0;
-            return amount - health;
+            return -health;
         }
         else
         {
-            health -= amount;
             return 0;
         }
     }
