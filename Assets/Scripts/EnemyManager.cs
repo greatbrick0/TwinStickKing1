@@ -14,17 +14,20 @@ public class EnemyManager : MonoBehaviour
 
     void Start()
     {
-        spawnPos.Add(new Vector2(0, -8));
-        spawnPos.Add(new Vector2(0, 8));
-        spawnPos.Add(new Vector2(-8, 0));
-        spawnPos.Add(new Vector2(8, 0));
+        if(spawnPos.Count == 0)
+        {
+            spawnPos.Add(new Vector2(0, -8));
+            spawnPos.Add(new Vector2(0, 8));
+            spawnPos.Add(new Vector2(-8, 0));
+            spawnPos.Add(new Vector2(8, 0));
+        }
     }
 
     void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.E))
         {
-            newEnemy = Instantiate(enemies[0]);
+            newEnemy = Instantiate(enemies[0], this.transform);
             newEnemy.transform.position = spawnPos[Random.Range(0, spawnPos.Count)];
         }
     }
