@@ -809,6 +809,7 @@ MonoBehaviour:
   enemyManager: {fileID: 1572718919}
   playerRef: {fileID: 1028864220}
   cameraRef: {fileID: 519420032}
+  arenaTravelDuration: 1
 --- !u!1 &1572718917
 GameObject:
   m_ObjectHideFlags: 0
