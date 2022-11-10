@@ -8,12 +8,25 @@ public class ManagerScript : MonoBehaviour
     public GameObject playerRef;
     public Transform cameraRef;
 
+    Vector2 currentArenaPos = Vector2.zero;
+    Vector2 nextArenaPos;
+    Vector2 playerTravelPreviousPos;
+    Vector2 playerTravelNextPos;
+    public float arenaTravelDuration = 1.0f;
+    float arenaTravelTime = 0.0f;
+    bool movingArenas = false;
+
+    public void MoveArenas()
+    {
+        playerRef.GetComponent<PlayerScript>().userControl = false;
+        playerTravelPreviousPos = playerRef.transform.position;
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

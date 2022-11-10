@@ -1409,6 +1409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls0
       objectReference: {fileID: 0}
+    - target: {fileID: 7379189526445262080, guid: 0fab1cdd2f4ca2944ab01df6b5917d59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7379189526445262083, guid: 0fab1cdd2f4ca2944ab01df6b5917d59, type: 3}
       propertyPath: m_RootOrder
       value: 3
