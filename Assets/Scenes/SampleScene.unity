@@ -541,7 +541,7 @@ Transform:
   - {fileID: 1590318254}
   - {fileID: 1969115424}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028864220
 GameObject:
@@ -792,7 +792,7 @@ Transform:
   - {fileID: 1028864221}
   - {fileID: 1572718918}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1547083532
 MonoBehaviour:
@@ -1136,7 +1136,7 @@ GameObject:
   - component: {fileID: 1766033365}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: healthbody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1354,7 +1354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7379189526445262083, guid: 0fab1cdd2f4ca2944ab01df6b5917d59, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7379189526445262083, guid: 0fab1cdd2f4ca2944ab01df6b5917d59, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1411,7 +1411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7379189526445262083, guid: 0fab1cdd2f4ca2944ab01df6b5917d59, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7379189526445262083, guid: 0fab1cdd2f4ca2944ab01df6b5917d59, type: 3}
       propertyPath: m_LocalPosition.x

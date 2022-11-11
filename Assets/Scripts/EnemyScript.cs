@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour
         //print(GetComponent<HealthScript>().health);
         if(GetComponent<HealthScript>().health <= 0)
         {
+            
             Destroy(this.gameObject);
         }
     }
