@@ -38,7 +38,7 @@ public class EnemyManager : MonoBehaviour
     {
         newEnemy = Instantiate(enemies[ID], this.transform);
         newEnemy.transform.position = spawnPos[Random.Range(0, spawnPos.Count)];
-        newEnemy.GetComponent<Enemy1>().SetSpeed(0.965f);
+        newEnemy.GetComponent<Enemy1>().SetSpeed(2f);
     }
 
     public int getFloor()

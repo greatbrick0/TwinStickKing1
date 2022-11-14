@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,11 +17,11 @@ public class Enemy1 : MonoBehaviour
     public float speed;
     bool moving;
 
-    int moveTimerReset = 0;
+    float moveTimerReset = 0;
     int moveType;
 
     Vector2 Floor= new Vector2(0,0);
-
+    Vector2 rPosSelect = new Vector2(0, 0);
     
     void Start()
     {
@@ -66,8 +67,8 @@ public class Enemy1 : MonoBehaviour
     }
     void FixedUpdate()
     {
-        moveTimerReset++;
-        if (moveTimerReset == 300)
+        moveTimerReset+=1.0f * Time.deltaTime;
+        if (moveTimerReset >= 3)
         {
             MoveReset();
             moveTimerReset = 0;
@@ -76,7 +77,7 @@ public class Enemy1 : MonoBehaviour
 
     public void MoveReset()
     {
-        int rando = Random.Range(0, 10);
+        int rando = UnityEngine.Random.Range(0, 10);
         switch (rando)
         {
             case 0:
@@ -95,6 +96,7 @@ public class Enemy1 : MonoBehaviour
                 break;
             case 10:
                 moveType = 2;
+                rPosSelect = new Vector2(UnityEngine.Random.Range(-7f, 8f), UnityEngine.Random.Range(-7 + Floor.y, 8 + Floor.y));
                 break;
         }
     }
@@ -113,7 +115,7 @@ public class Enemy1 : MonoBehaviour
     }
     void MovePassive()
     {
-
+        Move(rPosSelect);
     }
 
     void Move(Vector2 TargetPosition)
