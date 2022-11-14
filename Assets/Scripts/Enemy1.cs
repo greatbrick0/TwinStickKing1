@@ -9,6 +9,7 @@ public class Enemy1 : MonoBehaviour
 
     Rigidbody2D enemy;
 
+
     [SerializeField] private Transform _player;
     [SerializeField] GameObject player;
 
@@ -18,7 +19,9 @@ public class Enemy1 : MonoBehaviour
     int moveTimerReset = 0;
     int moveType;
 
-    int F;
+    Vector2 Floor= new Vector2(0,0);
+
+    
     void Start()
     {
         enemy = GetComponent<Rigidbody2D>();
@@ -29,6 +32,7 @@ public class Enemy1 : MonoBehaviour
 
     void Update()
     {
+        enemy.velocity = Vector2.zero;
         switch (moveType)
         {
             case 0:
@@ -52,13 +56,13 @@ public class Enemy1 : MonoBehaviour
     {
         return speed;
     }
-    public void GetFloor(int f)
+    public void SetFloor(int f)
     {
-       F = f;
+       Floor.y = f;
     }
-    public int GetFloor()
+    public Vector2 GetFloor()
     {
-        return F;
+        return Floor;
     }
     void FixedUpdate()
     {
@@ -97,17 +101,47 @@ public class Enemy1 : MonoBehaviour
 
     void MoveAggro()
     {
-        float move = speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, _player.position, move);
+        
+        Move(_player.position);
+        
+
     }
 
     void MoveCenter()
     {
-        float move = speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 0*32*F), move);
+        Move(Floor);
     }
     void MovePassive()
     {
 
     }
+
+    void Move(Vector2 TargetPosition)
+    {
+        Vector2 moveVCount = new Vector2(0, 0);
+        if (transform.position.y < TargetPosition.y)
+        {
+            moveVCount.y++;
+        }
+        if (transform.position.y > TargetPosition.y)
+        {
+            moveVCount.y--;
+        }
+        if (transform.position.x < TargetPosition.x)
+        {
+            moveVCount.x++;
+        }
+        if (transform.position.x > TargetPosition.x)
+        {
+            moveVCount.x--;
+        }
+        if (moveVCount.x != 0 && moveVCount.y != 0)
+        {
+            moveVCount.x /= 2;
+            moveVCount.y /= 2;
+        }
+        //transform.position = Vector2.MoveTowards(transform.position, Line, move);
+        enemy.velocity = moveVCount * speed;
+    }
+
 }
