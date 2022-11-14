@@ -9,6 +9,8 @@ public class EnemyManager : MonoBehaviour
     public List<GameObject> enemies;
     GameObject newEnemy;
 
+    float spawningDuration = 100.0f;
+    string enemySpawnData;
     public int alive = 0;
     public List<Vector2> spawnPos = new List<Vector2>();
 
@@ -28,10 +30,15 @@ public class EnemyManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            newEnemy = Instantiate(enemies[0], this.transform);
-            newEnemy.transform.position = spawnPos[Random.Range(0, spawnPos.Count)];
-            newEnemy.GetComponent<Enemy1>().SetSpeed(0.965f);
+            SpawnEnemy(0);
         }
+    }
+
+    void SpawnEnemy(int ID)
+    {
+        newEnemy = Instantiate(enemies[ID], this.transform);
+        newEnemy.transform.position = spawnPos[Random.Range(0, spawnPos.Count)];
+        newEnemy.GetComponent<Enemy1>().SetSpeed(0.965f);
     }
 
     public int getFloor()
@@ -50,4 +57,26 @@ public class EnemyManager : MonoBehaviour
            spawnPos[0] = newLocation;
         }
     }
+
+    public void EnemyWaveData(float time, string data)
+    {
+        //wave data will be passed down from the manager as a string when the player goes to a new arena
+        //ex: "00:002.4 01:003.6 00:005.0 02:007.9"
+        //different enemy spawns are seperated by spaces
+        //the first part of each enemy spawn is the type of enemy, the second part is the time they spawn
+        enemySpawnData = data;
+        spawningDuration = time;
+    }
+
+    bool CheckWaveEnded()
+    {
+        return spawningDuration <= 0.0f && alive <= 0;
+    }
+
+    void KillChildren()
+    {
+        //delete all children of the enemy manager
+    }
+
+
 }
