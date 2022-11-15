@@ -10,7 +10,6 @@ public class Enemy1 : MonoBehaviour
 
     Rigidbody2D enemy;
 
-
     [SerializeField] private Transform _player;
     [SerializeField] GameObject player;
 
@@ -77,7 +76,7 @@ public class Enemy1 : MonoBehaviour
 
     public void MoveReset()
     {
-        int rando = UnityEngine.Random.Range(0, 10);
+        int rando = UnityEngine.Random.Range(0, 11);
         switch (rando)
         {
             case 0:

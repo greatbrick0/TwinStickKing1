@@ -32,7 +32,7 @@ public class ManagerScript : MonoBehaviour
 
     void Start()
     {
-        
+        enemyManager.EnemyWaveData(007.9f,"00:007.9 00:005.0 00:003.6 00:002.4");
     }
 
     void Update()

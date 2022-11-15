@@ -2096,6 +2096,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRef: {fileID: 1028864220}
+  powerDrops:
+  - {fileID: 2125550378610843252, guid: d53e81b4e3cb1da43826378242f434e8, type: 3}
   enemies:
   - {fileID: 1816768419623509825, guid: 58e0b217ccad978428016957f8bbb640, type: 3}
   alive: 0

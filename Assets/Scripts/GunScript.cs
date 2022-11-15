@@ -31,7 +31,7 @@ public class GunScript : MonoBehaviour
         {
             for (int ii = 0; ii < sprayAmount; ii++)
             {
-                print(spreadAngle * (ii - ((sprayAmount - 1) / 2.0f)));
+                //print(spreadAngle * (ii - ((sprayAmount - 1) / 2.0f)));
                 offset = VectorRotate(mainDirection, Mathf.PI / 2.0f);
                 offset *= spreadAngle * (ii - ((sprayAmount - 1) / 2.0f));
                 newBullet = Instantiate(bulletRef);

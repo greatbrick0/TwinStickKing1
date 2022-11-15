@@ -6,13 +6,18 @@ public class EnemyScript : MonoBehaviour
 {
     // Code that is on all enemies, and functions that can be called by enemy manager
     // such as damaging the player
+    public GameObject eManRef; //Reference to EnemyManager
 
+    void Start()
+    {
+        eManRef = transform.parent.gameObject;
+    }
     void Update()
     {
         //print(GetComponent<HealthScript>().health);
         if(GetComponent<HealthScript>().health <= 0)
         {
-            
+            eManRef.GetComponent<EnemyManager>().spawnDrop(this.transform.position);   
             Destroy(this.gameObject);
         }
     }
