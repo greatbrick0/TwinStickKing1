@@ -68,4 +68,9 @@ public class ManagerScript : MonoBehaviour
         output.z = newZ;
         return output;
     }
+
+    public void Done()
+    {
+        enemyManager.EnemyWaveData(007.9f, "00:007.9 00:005.0 00:003.6 00:002.4");
+    }
 }

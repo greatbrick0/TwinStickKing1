@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public GameObject playerRef;
-
+    public ManagerScript mRef;
     [SerializeField] public List<GameObject> powerDrops; //powerup list, used by enemies on death.
     public List<GameObject> enemies;
     GameObject newSpawn;
@@ -32,13 +32,17 @@ public class EnemyManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (CheckWaveEnded())
+        {
+            Debug.Log("Wave Ended.");
+            mRef.SendMessage("Done");
+        }
         spawn = true;
         currentRoundTime += Time.deltaTime;
         while (spawn && spawnDatArray.Count > 0)
         {
             string topSpawn = spawnDatArray.Peek();
             string[] spawns = topSpawn.Split(':');
-            Debug.Log(currentRoundTime);
             if (float.Parse(spawns[1]) <= currentRoundTime)
             {
                 
@@ -61,6 +65,7 @@ public class EnemyManager : MonoBehaviour
         newSpawn = Instantiate(enemies[ID], this.transform);
         newSpawn.transform.position = spawnPos[UnityEngine.Random.Range(0, spawnPos.Count)];
         newSpawn.GetComponent<Enemy1>().SetSpeed(2f);
+        alive++;
     }
 
     public int getFloor()
@@ -86,6 +91,7 @@ public class EnemyManager : MonoBehaviour
         //ex: "00:002.4 01:003.6 00:005.0 02:007.9"
         //different enemy spawns are seperated by spaces
         //the first part of each enemy spawn is the type of enemy, the second part is the time they spawn
+        currentRoundTime = 0f;
         enemySpawnData = data;
         spawningDuration = time;
         string[] arr = data.Split(' ');
@@ -94,7 +100,7 @@ public class EnemyManager : MonoBehaviour
 
     bool CheckWaveEnded()
     {
-        return spawningDuration <= 0.0f && alive <= 0;
+        return currentRoundTime >= spawningDuration && alive <= 0;
     }
 
     void KillChildren() //Trigger this on player death, plz
@@ -118,12 +124,17 @@ public class EnemyManager : MonoBehaviour
                 newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
                 newSpawn.transform.position = dropSpot;
             }
-            else
+            /*
             {
                 newSpawn = Instantiate(powerDrops[dropRando - 10], this.transform); //10Credit
                 newSpawn.transform.position = dropSpot;
-            }
+            } */
                 
         }
+    }
+
+    public void enemyDies()
+    {
+        alive--;
     }
 }
