@@ -23,31 +23,41 @@ public class ManagerScript : MonoBehaviour
     bool movingArenas = false;
 
     bool allowedToTravel = false;
+    public int[] shopLevels = new int[] { 1, 3 };
+    List<string> storedWaves = new List<string>();
+    List<float> storedWavesDuration = new List<float>();
 
     public void MoveArenas(Vector2 playerEndPos, Vector2 newArenaPos, Vector3 newLocation)
     {
+        arenaTravelTime = 0.0f;
+        movingArenas = true;
+        currentArena += 1;
+        allowedToTravel = false;
         playerRef.GetComponent<PlayerScript>().userControl = false;
+
         playerTravelPreviousPos = playerRef.transform.position;
         playerTravelNextPos = playerEndPos;
+
         currentArena3d = secondCamera.position;
         nextArena3d = newLocation;
         nextArenaPos = newArenaPos;
-        arenaTravelTime = 0.0f;
-        movingArenas = true;
-
-        currentArena += 1;
     }
 
     void Start()
     {
-        enemyManager.EnemyWaveData(007.9f,"00:007.9 00:005.0 00:003.6 00:002.4");
+        storedWaves.Add("00:007.9 00:005.0 00:003.6 00:002.4");
+        storedWavesDuration.Add(007.9f);
+        storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 00:003.6 00:003.0 00:002.4 00:001.4");
+        storedWavesDuration.Add(012.8f);
+
+        StartNewArena();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q) && allowedToTravel)
         {
-            MoveArenas(new Vector2(0.5f, -32.5f), new Vector2(0, -32), new Vector3(102, 11, -32));
+            MoveArenas(new Vector2(0.5f, -32.5f - currentArena * d), new Vector2(0, -32 - currentArena * d), new Vector3(102, 11, -32 - currentArena * d));
         }
 
         if (movingArenas)
@@ -59,7 +69,7 @@ public class ManagerScript : MonoBehaviour
             cameraRef.position = SetZ((nextArenaPos * (arenaTravelTime / arenaTravelDuration)) 
                 + (currentArenaPos * (1 - arenaTravelTime / arenaTravelDuration)), -10);
             secondCamera.position = (nextArena3d * (arenaTravelTime / arenaTravelDuration))
-                + (currentArena3d * (1 - arenaTravelTime / arenaTravelDuration));
+                + (currentArena3d * (1 - arenaTravelTime / arenaTravelDuration)); // do not touch this
 
             if (arenaTravelTime >= arenaTravelDuration)
             {
@@ -89,20 +99,28 @@ public class ManagerScript : MonoBehaviour
 
     public void StageCleared()
     {
-        allowedToTravel = true;
-        if(currentArena == 1 || currentArena == 3)
+        if(currentArena == 4)
         {
-            //call shop function
+            // win the game
         }
         else
         {
-            //call blinking arrow
+            allowedToTravel = true;
+            if (currentArena == 1 || currentArena == 3)
+            {
+                //call shop function
+            }
+            else
+            {
+                //call blinking arrow
+            }
+            // remove walls preventing travel
         }
-        // remove walls preventing travel
     }
 
     void StartNewArena()
     {
-        allowedToTravel = false;
+        
+        enemyManager.EnemyWaveData(storedWavesDuration[currentArena], storedWaves[currentArena]);
     }
 }

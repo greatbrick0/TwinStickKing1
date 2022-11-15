@@ -13,7 +13,7 @@ public class EnemyManager : MonoBehaviour
 
     float spawningDuration = 0f;
     string enemySpawnData;
-    Stack<string> spawnDatArray;
+    Stack<string> spawnDatArray = new Stack<string>();
     public int alive = 0;
     public List<Vector2> spawnPos = new List<Vector2>();
     float currentRoundTime = 0f;
@@ -36,11 +36,6 @@ public class EnemyManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (CheckWaveEnded())
-        {
-            Debug.Log("Wave Ended.");
-            mRef.SendMessage("Done");
-        }
         spawn = true;
         currentRoundTime += Time.deltaTime;
         while (spawn && spawnDatArray.Count > 0)
@@ -77,15 +72,15 @@ public class EnemyManager : MonoBehaviour
         return Floor;
     }
 
-    public void NextFloor() //when the level is over, please call this. It will adjust spawnPosition
+    void NextFloor() //when the level is over, please call this. It will adjust spawnPosition
     {
         Vector2 newLocation;
         Floor++;
         for (int i=0; i<4; i++)
         {
-           newLocation = spawnPos[0];
-           newLocation.y = newLocation.y + (d * Floor);
-           spawnPos[0] = newLocation;
+           newLocation = spawnPos[i];
+           newLocation.y = newLocation.y - (d * Floor);
+           spawnPos[i] = newLocation;
         }
     }
 
@@ -120,25 +115,45 @@ public class EnemyManager : MonoBehaviour
 
     public void spawnDrop(Vector2 dropSpot) //triggered by an enemy dying (enemyScript). spawns a powerup (sometimes)
     {
-        int dropRando = UnityEngine.Random.Range(0, 15);
-        if (dropRando >= 5)
+        //int dropRando = UnityEngine.Random.Range(0, 15);
+        //if (dropRando >= 5)
+        //{
+        //    if (dropRando <=10)
+        //    {
+        //        newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
+        //        newSpawn.transform.position = dropSpot;
+        //    }
+        //    else
+        //    {
+        //        newSpawn = Instantiate(powerDrops[dropRando - 10], this.transform); //10Credit
+        //        newSpawn.transform.position = dropSpot;
+        //    } 
+
+        //}
+        int dropRando = UnityEngine.Random.Range(0, 100);
+
+        if(dropRando <= 33) //from 0 to 33 (33%)
         {
-            if (dropRando <=10)
-            {
-                newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
-                newSpawn.transform.position = dropSpot;
-            }
-            else
-            {
-                newSpawn = Instantiate(powerDrops[dropRando - 10], this.transform); //10Credit
-                newSpawn.transform.position = dropSpot;
-            } 
-                
+            newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
+            newSpawn.transform.position = dropSpot;
+        }
+        else if( dropRando <= 66) //from 34 to 66 (33%)
+        {
+            dropRando = UnityEngine.Random.Range(1, 5); //Power up
+            newSpawn = Instantiate(powerDrops[dropRando], this.transform);
+            newSpawn.transform.position = dropSpot;
         }
     }
 
     public void enemyDies()
     {
         alive--;
+        if (CheckWaveEnded())
+        {
+            Debug.Log("Wave Ended.");
+            NextFloor();
+
+            mRef.StageCleared();
+        }
     }
 }
