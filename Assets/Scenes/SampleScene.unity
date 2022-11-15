@@ -2099,6 +2099,10 @@ MonoBehaviour:
   mRef: {fileID: 1547083532}
   powerDrops:
   - {fileID: 2125550378610843252, guid: d53e81b4e3cb1da43826378242f434e8, type: 3}
+  - {fileID: 7611189522604321173, guid: a39bf28f47e74b44d94f6c56e49a851a, type: 3}
+  - {fileID: 7611189522604321173, guid: 9e8e45adb62d7384886666c9272587f4, type: 3}
+  - {fileID: 7611189522604321173, guid: 62655e6a0224fed4ba1a4507dabfbbfc, type: 3}
+  - {fileID: 1808254808171289640, guid: 0ac433ce0fe421b46aa5b7d6751b11a5, type: 3}
   enemies:
   - {fileID: 1816768419623509825, guid: 58e0b217ccad978428016957f8bbb640, type: 3}
   alive: 0

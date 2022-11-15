@@ -124,11 +124,11 @@ public class EnemyManager : MonoBehaviour
                 newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
                 newSpawn.transform.position = dropSpot;
             }
-            /*
+            else
             {
                 newSpawn = Instantiate(powerDrops[dropRando - 10], this.transform); //10Credit
                 newSpawn.transform.position = dropSpot;
-            } */
+            } 
                 
         }
     }
