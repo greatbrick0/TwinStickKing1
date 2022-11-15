@@ -19,8 +19,12 @@ public class EnemyManager : MonoBehaviour
     float currentRoundTime = 0f;
     bool spawn; //used in fixedupdate to repeat the spawn if necissary
     int Floor = 0;
+    float d = 1;
+
     void Start()
     {
+        d = mRef.d; //this is the distance between arenas, 32
+
         if(spawnPos.Count == 0)
         {
             spawnPos.Add(new Vector2(0, -8));
@@ -80,7 +84,7 @@ public class EnemyManager : MonoBehaviour
         for (int i=0; i<4; i++)
         {
            newLocation = spawnPos[0];
-           newLocation.y = newLocation.y + (32 * Floor);
+           newLocation.y = newLocation.y + (d * Floor);
            spawnPos[0] = newLocation;
         }
     }
