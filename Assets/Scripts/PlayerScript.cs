@@ -9,11 +9,15 @@ public class PlayerScript : MonoBehaviour
 
     Vector2 moveDirection;
     Vector2 shootDirection;
+
     bool attemptShoot;
 
+
+    public static int bulletNum = 1;
     public int baseDamage = 1;
-    public float baseShootSpeed = 1.0f;
-    public float baseSpeed = 4;
+    public static float bodySpeed = 1f;
+    public static float baseShootSpeed = 0.4f;
+    public static float baseSpeed = 2;
     public bool userControl = true;
 
     void Start()
@@ -39,7 +43,7 @@ public class PlayerScript : MonoBehaviour
         body.velocity = moveDirection * baseSpeed;
         if (attemptShoot)
         {
-            if(gun.Shoot(shootDirection, baseDamage, 1))
+            if(gun.Shoot(shootDirection, baseDamage, bulletNum))
             {
                 gun.Reload(baseShootSpeed);
             }
