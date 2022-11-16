@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseDamage: 2
   baseShootSpeed: 0.4
-  baseSpeed: 2
+  baseSpeed: 3
   bulletNumMod: 1
   moveSpeedMod: 1
   shootSpeedMod: 1
