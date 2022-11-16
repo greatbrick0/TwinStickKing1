@@ -115,31 +115,16 @@ public class EnemyManager : MonoBehaviour
 
     public void spawnDrop(Vector2 dropSpot) //triggered by an enemy dying (enemyScript). spawns a powerup (sometimes)
     {
-        //int dropRando = UnityEngine.Random.Range(0, 15);
-        //if (dropRando >= 5)
-        //{
-        //    if (dropRando <=10)
-        //    {
-        //        newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
-        //        newSpawn.transform.position = dropSpot;
-        //    }
-        //    else
-        //    {
-        //        newSpawn = Instantiate(powerDrops[dropRando - 10], this.transform); //10Credit
-        //        newSpawn.transform.position = dropSpot;
-        //    } 
-
-        //}
         int dropRando = UnityEngine.Random.Range(0, 100);
 
         if(dropRando <= 33) //from 0 to 33 (33%)
         {
-            newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
-            newSpawn.transform.position = dropSpot;
+            //newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
+            //newSpawn.transform.position = dropSpot;
         }
         else if( dropRando <= 66) //from 34 to 66 (33%)
         {
-            dropRando = UnityEngine.Random.Range(1, 3); //Power up
+            dropRando = UnityEngine.Random.Range(0, 4); //Power up
             newSpawn = Instantiate(powerDrops[dropRando], this.transform);
             newSpawn.transform.position = dropSpot;
         }
