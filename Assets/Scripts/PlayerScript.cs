@@ -12,12 +12,14 @@ public class PlayerScript : MonoBehaviour
 
     bool attemptShoot;
 
+    public int baseDamage = 1; // these are used for permanant shop upgrades
+    public float baseShootSpeed = 0.4f;
+    public float baseSpeed = 2;
 
-    public static int bulletNum = 1;
-    public int baseDamage = 1;
-    public static float bodySpeed = 1f;
-    public static float baseShootSpeed = 0.4f;
-    public static float baseSpeed = 2;
+    public int bulletNumMod = 1; // these are used for temporary power ups
+    public float moveSpeedMod = 1.0f;
+    public float shootSpeedMod = 1.0f;
+
     public bool userControl = true;
 
     void Start()
@@ -40,12 +42,12 @@ public class PlayerScript : MonoBehaviour
             PlayerDeath();
         }
 
-        body.velocity = moveDirection * baseSpeed;
+        body.velocity = moveDirection * baseSpeed * moveSpeedMod;
         if (attemptShoot)
         {
-            if(gun.Shoot(shootDirection, baseDamage, bulletNum))
+            if(gun.Shoot(shootDirection, baseDamage, bulletNumMod))
             {
-                gun.Reload(baseShootSpeed);
+                gun.Reload(baseShootSpeed * shootSpeedMod);
             }
         }
     }

@@ -6,8 +6,8 @@ public class PowerUp : MonoBehaviour
 {
     GameObject powerUp;
     GameObject player;
-    public static string _powerUp;
-    // Start is called before the first frame update
+    public string powerUpType;
+    
     void Start()
     {
         powerUp = GetComponent<GameObject>();
@@ -20,9 +20,8 @@ public class PowerUp : MonoBehaviour
         {
             player = collision.gameObject;
             Destroy(this.gameObject);
-            PlayerState.badges = PlayerState.badges + 1;
-            _powerUp = this.name;
-            Debug.Log($"Player Collected {_powerUp}");
+            collision.gameObject.GetComponent<PlayerState>().badges += 1;
+            collision.gameObject.GetComponent<PlayerState>().PickUpPowerUp(powerUpType);
         }
     }
 }

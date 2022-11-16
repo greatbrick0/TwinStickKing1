@@ -5,75 +5,132 @@ using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
 {
-    static public int badges = 0;
+    public PlayerScript scriptRef;
+
+    public int badges = 0;
+    public string heldPowerUp = "none";
+
+    float speedBoostTime = 0.0f;
+    float attackBoostTime = 0.0f;
+    float shotgunTime = 0.0f;
+    float octoShotTime = 0.0f;
+    float swordTime = 0.0f;
     
-    private void Update()
+    void Update()
     {
-        if (Input.GetKey(KeyCode.B) && badges > 0 && PowerUp._powerUp == "Sheriff Badge(Clone)")
+        scriptRef.shootSpeedMod = 1.0f;
+        scriptRef.bulletNumMod = 1;
+        scriptRef.moveSpeedMod = 1.0f;
+
+        if (shotgunTime >= 0.0f)
+        {
+            scriptRef.shootSpeedMod *= 1.5f; // slower attack speed
+            scriptRef.bulletNumMod = 3;
+            shotgunTime -= 1.0f * Time.deltaTime;
+        }
+        if(attackBoostTime >= 0.0f)
+        {
+            scriptRef.shootSpeedMod *= 0.4f;
+            attackBoostTime -= 1.0f * Time.deltaTime;
+        }
+        if(speedBoostTime >= 0.0f)
+        {
+            scriptRef.moveSpeedMod *= 0.5f; // faster attack speed
+            speedBoostTime -= 1.0f * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            UsePowerUp();
+        }
+    }
+
+    private void Start()
+    {
+        scriptRef = gameObject.GetComponent<PlayerScript>();
+    }
+
+    void Coffee()
+    {
+        
+        Debug.Log($"{heldPowerUp}: Used");
+    }
+
+    void HeavyMachineGun()
+    {
+        scriptRef.shootSpeedMod *= 0.5f;
+
+        attackBoostTime = 16.0f;
+        Debug.Log($"{heldPowerUp}: Used");
+    }
+
+    void ScreenNuke()
+    {
+
+    }
+
+    void Shotgun()
+    {
+        shotgunTime = 12.0f;
+        Debug.Log($"{heldPowerUp}: Used");
+    }
+
+    void SmokeBomb()
+    {
+
+    }
+
+    void TombStone()
+    {
+        swordTime = 6.0f;
+    }
+
+    void WagonWheel()
+    {
+        octoShotTime = 12.0f;
+    }
+
+    void SheriffBadge()
+    {
+        speedBoostTime = 12.0f;
+        attackBoostTime = 12.0f;
+        shotgunTime = 12.0f;
+
+        Debug.Log($"{heldPowerUp}: Used");
+    }
+
+    public void PickUpPowerUp(string pType)
+    {
+
+        Debug.Log($"Player Collected {pType}");
+        UsePowerUp();
+        heldPowerUp = pType;
+    }
+
+    void UsePowerUp()
+    {
+        if (badges > 0 && heldPowerUp == "Sheriff Badge")
         {
             SheriffBadge();
         }
-        if (Input.GetKey(KeyCode.H) && badges > 0 && PowerUp._powerUp == "Heavy Machine Gun(Clone)")
+        else if (badges > 0 && heldPowerUp == "Heavy Machine Gun")
         {
             HeavyMachineGun();
         }
-        if (Input.GetKey(KeyCode.G) && badges > 0 && PowerUp._powerUp == "Shotgun(Clone)")
+        else if (badges > 0 && heldPowerUp == "Shotgun")
         {
             Shotgun();
         }
-        if (Input.GetKey(KeyCode.C) && badges > 0 && PowerUp._powerUp == "Coffee(Clone)")
+        else if (badges > 0 && heldPowerUp == "Coffee")
         {
             Coffee();
+        } // add more power ups later
+        else
+        {
+            badges++;
+            //print(heldPowerUp + badges);
         }
-
-
-    }
-    public void Coffee()
-    {
-        PlayerScript.bodySpeed = 5;
-        Debug.Log($"{PowerUp._powerUp}: Used");
-    }
-
-    // Update is called once per frame
-    public void HeavyMachineGun()
-    {
-        PlayerScript.baseShootSpeed = 0.1f;
-        Debug.Log($"{PowerUp._powerUp}: Used");
-    }
-
-    public void ScreenNuke()
-    {
-
-    }
-
-    public void Shotgun()
-    {
-
-        PlayerScript.bulletNum = 3;
-        PlayerScript.baseShootSpeed = 0.95f * PlayerScript.baseShootSpeed;
-        Debug.Log($"{PowerUp._powerUp}: Used");
-    }
-
-    public void SmokeBomb()
-    {
-
-    }
-
-    public void TombStone()
-    {
-
-    }
-
-    public void WagonWheel()
-    {
-
-    }
-
-    public void SheriffBadge()
-    {
-        PlayerScript.baseShootSpeed = 0.2f;
-        PlayerScript.bulletNum = 3;
-        PlayerScript.bodySpeed = 3;
-        Debug.Log($"{PowerUp._powerUp}: Used");
+        badges--;
+        heldPowerUp = "none";
     }
 }

@@ -146,3 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18230ff9947e68e44be7d7d2fa261126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUpType: Shotgun
