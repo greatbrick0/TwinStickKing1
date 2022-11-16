@@ -30,12 +30,12 @@ public class PlayerState : MonoBehaviour
         }
         if(attackBoostTime >= 0.0f)
         {
-            scriptRef.shootSpeedMod *= 0.4f;
+            scriptRef.shootSpeedMod *= 0.4f; // faster attack speed
             attackBoostTime -= 1.0f * Time.deltaTime;
         }
         if(speedBoostTime >= 0.0f)
         {
-            scriptRef.moveSpeedMod *= 0.5f; // faster attack speed
+            scriptRef.moveSpeedMod *= 2.0f;
             speedBoostTime -= 1.0f * Time.deltaTime;
         }
 
@@ -52,14 +52,12 @@ public class PlayerState : MonoBehaviour
 
     void Coffee()
     {
-        
+        speedBoostTime = 12.0f;
         Debug.Log($"{heldPowerUp}: Used");
     }
 
     void HeavyMachineGun()
     {
-        scriptRef.shootSpeedMod *= 0.5f;
-
         attackBoostTime = 16.0f;
         Debug.Log($"{heldPowerUp}: Used");
     }
