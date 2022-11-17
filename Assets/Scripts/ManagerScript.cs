@@ -10,7 +10,7 @@ public class ManagerScript : MonoBehaviour
     public Transform secondCamera;
 
     public int currentArena = 0;
-    public float d = 32;
+    public float d = 128;
 
     Vector2 currentArenaPos = Vector2.zero;
     Vector2 nextArenaPos;
@@ -65,7 +65,7 @@ public class ManagerScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Q) && allowedToTravel)
         {
-            MoveArenas(new Vector2(0.5f, -32.5f - currentArena * d), new Vector2(0, -32 - currentArena * d), new Vector3(102, 11, -32 - currentArena * d));
+            MoveArenas(new Vector2(0.5f, -0.5f - d - currentArena * d), new Vector2(0, -d - currentArena * d), new Vector3(102, 11, d + currentArena * d * 32));
         }
 
         if (movingArenas)
