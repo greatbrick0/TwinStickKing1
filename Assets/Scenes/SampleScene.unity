@@ -1713,6 +1713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748699214dc0b454a915947f7d115c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1074531966}
   baseDamage: 2
   baseShootSpeed: 0.4
   baseSpeed: 3
@@ -1842,7 +1843,7 @@ Transform:
   m_GameObject: {fileID: 1074531964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1028864221}

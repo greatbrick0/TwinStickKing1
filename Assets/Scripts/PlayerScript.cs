@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public Animator animator;
+
     Rigidbody2D body;
     GunScript gun;
 
@@ -30,6 +32,30 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.W) == true)
+        {
+            animator.SetBool("movingUp", true);
+        }
+         else if (Input.GetKey(KeyCode.A) == true)
+        {
+            animator.SetBool("movingLeft", true);
+        }
+        else if (Input.GetKey(KeyCode.S) == true)
+        {
+            animator.SetBool("movingDown", true);
+        }
+        else if (Input.GetKey(KeyCode.D) == true)
+        {
+            animator.SetBool("movingRight", true);
+        }
+        else
+        {
+            animator.SetBool("movingRight", false);
+            animator.SetBool("movingLeft", false);
+            animator.SetBool("movingUp", false);
+            animator.SetBool("movingDown", false);
+        }
+        
         moveDirection = FindMoveVector();
         shootDirection = FindShootVector();
         attemptShoot = shootDirection.magnitude > 0.0f;
