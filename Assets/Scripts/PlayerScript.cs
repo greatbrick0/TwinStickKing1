@@ -34,19 +34,27 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) == true)
         {
+            animator.speed.Equals(1f);
             animator.SetBool("movingUp", true);
+            CheckShootingDirection();
         }
          else if (Input.GetKey(KeyCode.A) == true)
         {
+            animator.speed.Equals(1f);
             animator.SetBool("movingLeft", true);
+            CheckShootingDirection();
         }
         else if (Input.GetKey(KeyCode.S) == true)
         {
+            animator.speed.Equals(1f);
             animator.SetBool("movingDown", true);
+            CheckShootingDirection();
         }
         else if (Input.GetKey(KeyCode.D) == true)
         {
+            animator.speed.Equals(1f);
             animator.SetBool("movingRight", true);
+            CheckShootingDirection();
         }
         else
         {
@@ -60,7 +68,21 @@ public class PlayerScript : MonoBehaviour
         shootDirection = FindShootVector();
         attemptShoot = shootDirection.magnitude > 0.0f;
     }
-
+    //Face the player in the direction that the player is shooting
+    void CheckShootingDirection()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow) ||
+            Input.GetKey(KeyCode.RightArrow) || 
+            Input.GetKey(KeyCode.UpArrow) || 
+            Input.GetKey(KeyCode.DownArrow))
+        {
+            animator.SetBool("movingRight", false);
+            animator.SetBool("movingLeft", false);
+            animator.SetBool("movingUp", false);
+            animator.SetBool("movingDown", false);
+            ChangeAnimation();
+        }
+    }
     void FixedUpdate()
     {
         if(GetComponent<HealthScript>().health <= 0)
@@ -130,6 +152,33 @@ public class PlayerScript : MonoBehaviour
         return outputVector;
     }
 
+    void ChangeAnimation()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            animator.SetBool("movingRight", false);
+            animator.SetBool("movingLeft", true);
+            animator.speed.Equals(-1f);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            animator.SetBool("movingUp", true);
+            animator.SetBool("movingDown", false);
+            animator.speed.Equals(-1f);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            animator.SetBool("movingRight", true);
+            animator.SetBool("movingLeft", false);
+            animator.speed.Equals(-1f);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            animator.SetBool("movingDown", true);
+            animator.SetBool("movingUp", false);
+            animator.speed.Equals(-1f);
+        }
+    }
     void OnCollisionEnter(Collision collision)
     {
         print(name + " collided with: " + collision.gameObject.name);
