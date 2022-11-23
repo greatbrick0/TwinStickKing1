@@ -8,6 +8,7 @@ public class ManagerScript : MonoBehaviour
     public GameObject playerRef;
     public Transform cameraRef;
     public Transform secondCamera;
+    public Transform doorsRef;
 
     public int currentArena = 0;
     public float d = 128;
@@ -27,7 +28,7 @@ public class ManagerScript : MonoBehaviour
     List<string> storedWaves = new List<string>();
     List<float> storedWavesDuration = new List<float>();
 
-    public void MoveArenas(Vector2 playerEndPos, Vector2 newArenaPos, Vector3 newLocation)
+    void MoveArenas(Vector2 playerEndPos, Vector2 newArenaPos, Vector3 newLocation)
     {
         arenaTravelTime = 0.0f;
         movingArenas = true;
@@ -45,6 +46,9 @@ public class ManagerScript : MonoBehaviour
 
     void Start()
     {
+        //intentionally tedios
+        storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 00:003.6 00:003.0 00:002.4 00:001.4");
+        storedWavesDuration.Add(012.8f);
         storedWaves.Add("00:094.1 00:090.3 00:089.6 00:089.1 00:088.4 00:085.7 00:085.5 00:085.3 00:082.2 " +
             "00:082.0 00:081.8 00:081.6 00:081.4 00:081.2 00:081.0 00:080.3 00:079.8 00:078.9 00:076.3 00:074.0 00:072.9 " +
             "00:072.3 00:071.8 00:071.3 00:069.0 00:068.5 00:067.0 00:066.6 00:065.8 00:065.0 00:064.4 00:063.9 00:063.5 " +
@@ -63,11 +67,6 @@ public class ManagerScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q) && allowedToTravel)
-        {
-            MoveArenas(new Vector2(0.5f, -0.5f - d - currentArena * d), new Vector2(0, -d - currentArena * d), new Vector3(102, 11, d + currentArena * d * 32));
-        }
-
         if (movingArenas)
         {
             arenaTravelTime += 1.0f * Time.deltaTime;
@@ -114,7 +113,7 @@ public class ManagerScript : MonoBehaviour
         else
         {
             allowedToTravel = true;
-            if (currentArena == 1 || currentArena == 3)
+            if (Contains(shopLevels, currentArena))
             {
                 //call shop function
             }
@@ -122,13 +121,37 @@ public class ManagerScript : MonoBehaviour
             {
                 //call blinking arrow
             }
-            // remove walls preventing travel
+            doorsRef.localPosition = new Vector3(20, 0, 0);
         }
     }
 
     void StartNewArena()
     {
-        
-        enemyManager.EnemyWaveData(storedWavesDuration[currentArena], storedWaves[currentArena]);
+        if(currentArena == storedWaves.Count)
+        {
+            //boss
+        }
+        else
+        {
+            enemyManager.EnemyWaveData(storedWavesDuration[currentArena], storedWaves[currentArena]);
+        }
+        doorsRef.localPosition = new Vector3(0, 0, 0);
+    }
+
+    bool Contains(int[] checkList, int element)
+    {
+        foreach(int check in checkList)
+        {
+            if(check == element)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void FindAndMoveArenas()
+    {
+        MoveArenas(new Vector2(0.5f, -0.5f - d - currentArena * d), new Vector2(0, -d - currentArena * d), new Vector3(102, 11, d + currentArena * d * 32));
     }
 }
