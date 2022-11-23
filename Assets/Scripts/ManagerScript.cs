@@ -9,6 +9,8 @@ public class ManagerScript : MonoBehaviour
     public Transform cameraRef;
     public Transform secondCamera;
     public Transform doorsRef;
+    public GameObject shopObj;
+    GameObject newShopObj;
 
     public int currentArena = 0;
     public float d = 128;
@@ -115,7 +117,7 @@ public class ManagerScript : MonoBehaviour
             allowedToTravel = true;
             if (Contains(shopLevels, currentArena))
             {
-                //call shop function
+                SpawnShop();
             }
             else
             {
@@ -153,5 +155,12 @@ public class ManagerScript : MonoBehaviour
     public void FindAndMoveArenas()
     {
         MoveArenas(new Vector2(0.5f, -0.5f - d - currentArena * d), new Vector2(0, -d - currentArena * d), new Vector3(102, 11, d + currentArena * d * 32));
+    }
+
+    void SpawnShop()
+    {
+        newShopObj = Instantiate(shopObj, transform);
+        newShopObj.transform.position = new Vector2(0, -d - currentArena * d) + new Vector2(0, 10);
+        print("shop spawned at " + newShopObj.transform.position);
     }
 }
