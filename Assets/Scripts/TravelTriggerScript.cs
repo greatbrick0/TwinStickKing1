@@ -7,6 +7,9 @@ public class TravelTriggerScript : MonoBehaviour
     public ManagerScript managerRef;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        managerRef.FindAndMoveArenas();
+        if(collision.gameObject.GetComponent<PlayerScript>() != null)
+        {
+            managerRef.FindAndMoveArenas();
+        }
     }
 }
