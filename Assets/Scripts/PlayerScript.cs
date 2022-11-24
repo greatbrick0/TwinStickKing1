@@ -7,10 +7,11 @@ public class PlayerScript : MonoBehaviour
     public Animator animator;
 
     Rigidbody2D body;
+    GameObject enemy;
     GunScript gun;
 
     Vector2 moveDirection;
-    Vector2 shootDirection;
+    public Vector2 shootDirection;
 
     bool attemptShoot;
 

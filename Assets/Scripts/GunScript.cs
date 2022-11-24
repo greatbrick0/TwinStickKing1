@@ -11,6 +11,7 @@ public class GunScript : MonoBehaviour
     public float projectileSpeed = 8;
     public List<string> targetTeam = new List<string>();
 
+    public bool wagonwheel;
     void Start()
     {
         cooldownTime = cooldown;
@@ -29,8 +30,11 @@ public class GunScript : MonoBehaviour
 
         if(cooldownTime <= 0.0f)
         {
+            
             for (int ii = 0; ii < sprayAmount; ii++)
             {
+                if(!wagonwheel)
+                {
                 //print(spreadAngle * (ii - ((sprayAmount - 1) / 2.0f)));
                 offset = VectorRotate(mainDirection, Mathf.PI / 2.0f);
                 offset *= spreadAngle * (ii - ((sprayAmount - 1) / 2.0f));
@@ -40,6 +44,22 @@ public class GunScript : MonoBehaviour
                 newBullet.GetComponent<BulletScript>().speed = projectileSpeed;
                 newBullet.GetComponent<BulletScript>().targetTeam = targetTeam;
                 newBullet.GetComponent<BulletScript>().damage = damageArg;
+                }
+                //very unoptimized way to implementation of Wagon Wheel
+                else if (wagonwheel)
+                {
+                    for(int jj = 0; jj < 8; jj++)
+                    {
+                        newBullet = Instantiate(bulletRef);
+                        newBullet.transform.position = transform.position;
+                        offset = VectorRotate(new Vector2(0, 1), Mathf.PI / 2.0f);
+                        offset *= spreadAngle * (ii - ((sprayAmount - 1) / 2.0f));
+                        newBullet.GetComponent<BulletScript>().direction = VectorRotate(new Vector2(0, 1) + offset, Mathf.PI/4 * jj);
+                        newBullet.GetComponent<BulletScript>().speed = projectileSpeed;
+                        newBullet.GetComponent<BulletScript>().targetTeam = targetTeam;
+                        newBullet.GetComponent<BulletScript>().damage = damageArg;
+                    }
+                }
             }
             return true;
         }
