@@ -6,6 +6,7 @@ public class ShopScript : MonoBehaviour
 {
     string state = "descend";
     float stateDuration = 0.0f;
+    public float flySpeed = 3.0f;
     void Start()
     {
         
@@ -15,7 +16,14 @@ public class ShopScript : MonoBehaviour
     {
         if(state == "descend")
         {
-            transform.position -= new Vector3(0, -1, 0) * Time.deltaTime;
+            transform.position += new Vector3(0, -1, 0) * flySpeed * Time.deltaTime;
+            stateDuration += 1.0f * Time.deltaTime;
+
+            if(stateDuration >= 3.0f)
+            {
+                state = "float";
+                stateDuration = 0.0f;
+            }
         }
     }
 }

@@ -164,7 +164,7 @@ public class ManagerScript : MonoBehaviour
     {
         newShopObj = Instantiate(shopObj, transform);
         newShopObj.transform.position = currentArenaPos + new Vector2(0.5f, 10.0f);
-        newShopObj.transform.position += new Vector3(0, 0, -11);
+        newShopObj.transform.position += new Vector3(0, 0, -8);
         print("shop spawned at " + newShopObj.transform.position);
     }
 }
