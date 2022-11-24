@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerState : MonoBehaviour
 {
     public PlayerScript scriptRef;
-
+    public GunScript gun;
     public int badges = 0;
     public string heldPowerUp = "none";
 
@@ -38,7 +38,18 @@ public class PlayerState : MonoBehaviour
             scriptRef.moveSpeedMod *= 2.0f;
             speedBoostTime -= 1.0f * Time.deltaTime;
         }
-
+        if(octoShotTime >= 0.0f)
+        {
+            Vector2 outputVector = new Vector2(1, 1);
+            scriptRef.shootDirection = outputVector;
+            
+            while (octoShotTime >= 0.0f)
+            {
+                gun.Shoot(outputVector, 1, 1);
+            }
+            octoShotTime -= 1.0f * Time.deltaTime;
+        }
+                
         if (Input.GetKey(KeyCode.Space))
         {
             UsePowerUp();
@@ -48,6 +59,7 @@ public class PlayerState : MonoBehaviour
     private void Start()
     {
         scriptRef = gameObject.GetComponent<PlayerScript>();
+        gun = GetComponent<GunScript>();
     }
 
     void Coffee()
@@ -123,6 +135,10 @@ public class PlayerState : MonoBehaviour
         {
             Coffee();
         } // add more power ups later
+        else if (badges > 0 && heldPowerUp == "Wagon Wheel")
+        {
+            WagonWheel();
+        }
         else
         {
             badges++;
