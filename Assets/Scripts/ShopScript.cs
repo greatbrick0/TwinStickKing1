@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ShopScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    string state = "descend";
+    float stateDuration = 0.0f;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(state == "descend")
+        {
+            transform.position -= new Vector3(0, -1, 0) * Time.deltaTime;
+        }
     }
 }

@@ -124,7 +124,7 @@ public class EnemyManager : MonoBehaviour
         }
         else if( dropRando <= 19) //from 3 to 29 (15%)
         {
-            dropRando = UnityEngine.Random.Range(0, 4); //Power up
+            dropRando = UnityEngine.Random.Range(0, 5); //Power up
             newSpawn = Instantiate(powerDrops[dropRando], this.transform);
             newSpawn.transform.position = dropSpot;
         }
