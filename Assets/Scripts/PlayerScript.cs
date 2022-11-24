@@ -22,7 +22,6 @@ public class PlayerScript : MonoBehaviour
     public int bulletNumMod = 1; // these are used for temporary power ups
     public float moveSpeedMod = 1.0f;
     public float shootSpeedMod = 1.0f;
-    public int damageTaken;
 
     public bool userControl = true;
 
@@ -30,7 +29,6 @@ public class PlayerScript : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         gun = GetComponent<GunScript>();
-        enemy = GameObject.Find("Enemy1");
     }
 
     void Update()
@@ -185,11 +183,6 @@ public class PlayerScript : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         print(name + " collided with: " + collision.gameObject.name);
-
-        if (collision.gameObject.name == "Enemy1")
-        {
-            damageTaken = this.gameObject.GetComponent<HealthScript>().TakeDamage(damageTaken);
-        }
     }
 
     void PlayerDeath()

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerState : MonoBehaviour
 {
     public PlayerScript scriptRef;
-    public GunScript gun;
+    public GunScript gun;//for sake of testing
     public int badges = 0;
     public string heldPowerUp = "none";
 
@@ -40,14 +40,19 @@ public class PlayerState : MonoBehaviour
         }
         if(octoShotTime >= 0.0f)
         {
-            Vector2 outputVector = new Vector2(1, 1);
-            scriptRef.shootDirection = outputVector;
+            //Vector2 newoutputVector = new Vector2(1, 1);
+            //scriptRef.shootDirection = newoutputVector;
             
-            while (octoShotTime >= 0.0f)
-            {
-                gun.Shoot(outputVector, 1, 1);
-            }
+            //while (octoShotTime >= 0.0f)
+            //{
+              //  gun.Shoot(outputVector, 1, 1);
+            //}
+            gun.wagonwheel = true;
             octoShotTime -= 1.0f * Time.deltaTime;
+        }
+        else
+        {
+            gun.wagonwheel = false;
         }
                 
         if (Input.GetKey(KeyCode.Space))
@@ -98,6 +103,7 @@ public class PlayerState : MonoBehaviour
     void WagonWheel()
     {
         octoShotTime = 12.0f;
+        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void SheriffBadge()
@@ -134,11 +140,11 @@ public class PlayerState : MonoBehaviour
         else if (badges > 0 && heldPowerUp == "Coffee")
         {
             Coffee();
-        } // add more power ups later
+        } 
         else if (badges > 0 && heldPowerUp == "Wagon Wheel")
         {
             WagonWheel();
-        }
+        }// add more power ups later
         else
         {
             badges++;
