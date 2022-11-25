@@ -30,6 +30,9 @@ public class ManagerScript : MonoBehaviour
     List<string> storedWaves = new List<string>();
     List<float> storedWavesDuration = new List<float>();
 
+    public int coinAmount = 0;
+    public int liveAmount = 3;
+
     void MoveArenas(Vector2 playerEndPos, Vector2 newArenaPos, Vector3 newLocation)
     {
         arenaTravelTime = 0.0f;
