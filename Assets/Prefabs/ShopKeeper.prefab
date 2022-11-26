@@ -129,7 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874f34611e80bd542b8660354a8f701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradeObj: {fileID: 4134115015375295518, guid: f930aaffafd172040993eabcb0904f6f, type: 3}
   state: descend
   flySpeed: 5
   flyAccel: 1.6
   floatSpeed: 0.3
+  maxPurchases: 2

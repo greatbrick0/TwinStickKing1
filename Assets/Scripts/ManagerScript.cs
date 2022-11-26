@@ -32,21 +32,36 @@ public class ManagerScript : MonoBehaviour
 
     public int coinAmount = 0;
     public int liveAmount = 3;
+    public Dictionary<string, int> upgradeLevels = new Dictionary<string, int>() 
+    {
+        {"speed", 0}, { "attack", 0 }, { "damage", 0 }, { "lives", 0 }, { "kit", 0 }
+    };
+    public Dictionary<string, List<int>> upgradeCosts = new Dictionary<string, List<int>>()
+    {
+        {"speed", new List<int>(){10, 20}}, 
+        {"attack", new List<int>(){10, 20, 30}},
+        {"damage", new List<int>(){10, 20, 30}},
+        {"lives", new List<int>(){20}},
+        {"kit", new List<int>(){30}}
+    };
 
     void MoveArenas(Vector2 playerEndPos, Vector2 newArenaPos, Vector3 newLocation)
     {
-        arenaTravelTime = 0.0f;
-        movingArenas = true;
-        currentArena += 1;
-        allowedToTravel = false;
-        playerRef.GetComponent<PlayerScript>().userControl = false;
+        if (allowedToTravel)
+        {
+            arenaTravelTime = 0.0f;
+            movingArenas = true;
+            currentArena += 1;
+            allowedToTravel = false;
+            playerRef.GetComponent<PlayerScript>().userControl = false;
 
-        playerTravelPreviousPos = playerRef.transform.position;
-        playerTravelNextPos = playerEndPos;
+            playerTravelPreviousPos = playerRef.transform.position;
+            playerTravelNextPos = playerEndPos;
 
-        currentArena3d = secondCamera.position;
-        nextArena3d = newLocation;
-        nextArenaPos = newArenaPos;
+            currentArena3d = secondCamera.position;
+            nextArena3d = newLocation;
+            nextArenaPos = newArenaPos;
+        }
     }
 
     void Start()
@@ -160,6 +175,7 @@ public class ManagerScript : MonoBehaviour
 
     public void FindAndMoveArenas()
     {
+        DeleteShop();
         MoveArenas(new Vector2(0.5f, ((currentArena + 1) * -d) - 0.5f), new Vector2(0, (currentArena + 1) * -d), new Vector3(102, 11, (currentArena+1)*d*11));
     }
 
@@ -168,6 +184,17 @@ public class ManagerScript : MonoBehaviour
         newShopObj = Instantiate(shopObj, transform);
         newShopObj.transform.position = currentArenaPos + new Vector2(0.5f, 10.0f);
         newShopObj.transform.position += new Vector3(0, 0, -8);
-        print("shop spawned at " + newShopObj.transform.position);
+        //print("shop spawned at " + newShopObj.transform.position);
+    }
+
+    void DeleteShop()
+    {
+        for(int ii = 0; ii < transform.childCount; ii++)
+        {
+            if (transform.GetChild(ii).gameObject.GetComponent<ShopScript>() != null)
+            {
+                transform.GetChild(ii).gameObject.GetComponent<ShopScript>().CloseShop();
+            }
+        }
     }
 }

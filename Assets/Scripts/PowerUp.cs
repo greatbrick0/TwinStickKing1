@@ -20,7 +20,6 @@ public class PowerUp : MonoBehaviour
         {
             player = collision.gameObject;
             Destroy(this.gameObject);
-            collision.gameObject.GetComponent<PlayerState>().badges += 1;
             collision.gameObject.GetComponent<PlayerState>().PickUpPowerUp(powerUpType);
         }
     }
