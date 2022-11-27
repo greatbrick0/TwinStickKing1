@@ -76,6 +76,7 @@ public class UpgradePickUp : MonoBehaviour
                     purchased = true;
                     shopRef.Purchased();
                     Destroy(this.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>());
+                    transform.GetChild(1).gameObject.GetComponent<TextMeshPro>().text = "";
                 }
             }
         }
