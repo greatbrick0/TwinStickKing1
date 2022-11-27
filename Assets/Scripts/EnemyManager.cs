@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject playerRef;
     public ManagerScript mRef;
+    public GameObject smokeObj;
     [SerializeField] public List<GameObject> powerDrops; //powerup list, used by enemies on death.
     public List<GameObject> enemies;
     GameObject newSpawn;
@@ -130,8 +131,10 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public void enemyDies()
+    public void enemyDies(Vector2 deathSpot)
     {
+        newSpawn = Instantiate(smokeObj, this.transform);
+        newSpawn.transform.position = deathSpot;
         alive--;
         if (CheckWaveEnded())
         {
