@@ -102,6 +102,7 @@ public class ShopScript : MonoBehaviour
         purchaseAmount += 1;
         if(purchaseAmount >= maxPurchases)
         {
+            managerRef.CreateArrow();
             CloseShop();
         }
     }

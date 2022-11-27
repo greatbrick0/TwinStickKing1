@@ -98,11 +98,11 @@ public class UpgradePickUp : MonoBehaviour
     {
         print(statType);
         if(statType == "speed")
-        {
+        { // player speed starts at 3
             playerRef.baseSpeed += 1.2f;
         }
         else if(statType == "attack")
-        {
+        { // attack speed starts at 0.4
             playerRef.baseShootSpeed -= 0.07f;
         }
         else if(statType == "damage")

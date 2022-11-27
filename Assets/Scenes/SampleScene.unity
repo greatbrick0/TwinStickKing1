@@ -1562,6 +1562,7 @@ MonoBehaviour:
   cameraRef: {fileID: 519420032}
   secondCamera: {fileID: 1990125344}
   doorsRef: {fileID: 1540566397}
+  arrowObj: {fileID: 6655987698698071905, guid: c554c110964e4b64ea4f102258fd9686, type: 3}
   shopObj: {fileID: 2217992800635382371, guid: 9deb80e28b082234a81131efaca9550c, type: 3}
   currentArena: 0
   d: 32

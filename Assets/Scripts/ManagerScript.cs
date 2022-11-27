@@ -9,8 +9,9 @@ public class ManagerScript : MonoBehaviour
     public Transform cameraRef;
     public Transform secondCamera;
     public Transform doorsRef;
+    public GameObject arrowObj;
     public GameObject shopObj;
-    GameObject newShopObj;
+    GameObject newObj;
 
     public int currentArena = 0;
     public float d = 32;
@@ -38,11 +39,11 @@ public class ManagerScript : MonoBehaviour
     };
     public Dictionary<string, List<int>> upgradeCosts = new Dictionary<string, List<int>>()
     {
-        {"speed", new List<int>(){10, 20}}, 
-        {"attack", new List<int>(){10, 20, 30}},
-        {"damage", new List<int>(){10, 20, 30}},
-        {"lives", new List<int>(){20}},
-        {"kit", new List<int>(){30}}
+        {"speed", new List<int>(){80, 200}}, 
+        {"attack", new List<int>(){100, 200, 300}},
+        {"damage", new List<int>(){150, 300, 450}},
+        {"lives", new List<int>(){100}},
+        {"kit", new List<int>(){100}}
     };
 
     void MoveArenas(Vector2 playerEndPos, Vector2 newArenaPos, Vector3 newLocation)
@@ -142,7 +143,7 @@ public class ManagerScript : MonoBehaviour
             }
             else
             {
-                //call blinking arrow
+                CreateArrow();
             }
             doorsRef.localPosition = new Vector3(20, 0, 0);
         }
@@ -181,10 +182,10 @@ public class ManagerScript : MonoBehaviour
 
     void SpawnShop()
     {
-        newShopObj = Instantiate(shopObj, transform);
-        newShopObj.transform.position = currentArenaPos + new Vector2(0.5f, 10.0f);
-        newShopObj.transform.position += new Vector3(0, 0, -8);
-        //print("shop spawned at " + newShopObj.transform.position);
+        newObj = Instantiate(shopObj, transform);
+        newObj.transform.position = currentArenaPos + new Vector2(0.5f, 10.0f);
+        newObj.transform.position += new Vector3(0, 0, -8);
+        //print("shop spawned at " + newObj.transform.position);
     }
 
     void DeleteShop()
@@ -196,5 +197,12 @@ public class ManagerScript : MonoBehaviour
                 transform.GetChild(ii).gameObject.GetComponent<ShopScript>().CloseShop();
             }
         }
+    }
+
+    public void CreateArrow()
+    {
+        newObj = Instantiate(arrowObj, this.transform);
+        newObj.transform.position = currentArenaPos + new Vector2(0.5f, -7.2f);
+        newObj.transform.position += new Vector3(0, 0, -8);
     }
 }
