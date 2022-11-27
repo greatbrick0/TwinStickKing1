@@ -9,11 +9,12 @@ public class ManagerScript : MonoBehaviour
     public Transform cameraRef;
     public Transform secondCamera;
     public Transform doorsRef;
+    public GameObject arrowObj;
     public GameObject shopObj;
-    GameObject newShopObj;
+    GameObject newObj;
 
     public int currentArena = 0;
-    public float d = 128;
+    public float d = 32;
 
     Vector2 currentArenaPos = Vector2.zero;
     Vector2 nextArenaPos;
@@ -30,25 +31,45 @@ public class ManagerScript : MonoBehaviour
     List<string> storedWaves = new List<string>();
     List<float> storedWavesDuration = new List<float>();
 
+    public int coinAmount = 0;
+    public int liveAmount = 3;
+    public Dictionary<string, int> upgradeLevels = new Dictionary<string, int>() 
+    {
+        {"speed", 0}, { "attack", 0 }, { "damage", 0 }, { "lives", 0 }, { "kit", 0 }
+    };
+    public Dictionary<string, List<int>> upgradeCosts = new Dictionary<string, List<int>>()
+    {
+        {"speed", new List<int>(){80, 200}}, 
+        {"attack", new List<int>(){100, 200, 300}},
+        {"damage", new List<int>(){150, 300, 450}},
+        {"lives", new List<int>(){100}},
+        {"kit", new List<int>(){100}}
+    };
+
     void MoveArenas(Vector2 playerEndPos, Vector2 newArenaPos, Vector3 newLocation)
     {
-        arenaTravelTime = 0.0f;
-        movingArenas = true;
-        currentArena += 1;
-        allowedToTravel = false;
-        playerRef.GetComponent<PlayerScript>().userControl = false;
+        if (allowedToTravel)
+        {
+            arenaTravelTime = 0.0f;
+            movingArenas = true;
+            currentArena += 1;
+            allowedToTravel = false;
+            playerRef.GetComponent<PlayerScript>().userControl = false;
 
-        playerTravelPreviousPos = playerRef.transform.position;
-        playerTravelNextPos = playerEndPos;
+            playerTravelPreviousPos = playerRef.transform.position;
+            playerTravelNextPos = playerEndPos;
 
-        currentArena3d = secondCamera.position;
-        nextArena3d = newLocation;
-        nextArenaPos = newArenaPos;
+            currentArena3d = secondCamera.position;
+            nextArena3d = newLocation;
+            nextArenaPos = newArenaPos;
+        }
     }
 
     void Start()
     {
         //intentionally tedios
+        storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 00:003.6 00:003.0 00:002.4 00:001.4");
+        storedWavesDuration.Add(012.8f);
         storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 00:003.6 00:003.0 00:002.4 00:001.4");
         storedWavesDuration.Add(012.8f);
         storedWaves.Add("00:094.1 00:090.3 00:089.6 00:089.1 00:088.4 00:085.7 00:085.5 00:085.3 00:082.2 " +
@@ -86,6 +107,7 @@ public class ManagerScript : MonoBehaviour
                 playerRef.transform.position = SetZ(playerTravelNextPos, 0);
                 cameraRef.position = SetZ(nextArenaPos, -10);
                 secondCamera.position = nextArena3d;
+                currentArenaPos = nextArenaPos;
                 playerRef.GetComponent<PlayerScript>().userControl = true;
                 StartNewArena();
             }
@@ -121,7 +143,7 @@ public class ManagerScript : MonoBehaviour
             }
             else
             {
-                //call blinking arrow
+                CreateArrow();
             }
             doorsRef.localPosition = new Vector3(20, 0, 0);
         }
@@ -154,13 +176,33 @@ public class ManagerScript : MonoBehaviour
 
     public void FindAndMoveArenas()
     {
-        MoveArenas(new Vector2(0.5f, -0.5f - d - currentArena * d), new Vector2(0, -d - currentArena * d), new Vector3(102, 11, d + currentArena * d * 32));
+        DeleteShop();
+        MoveArenas(new Vector2(0.5f, ((currentArena + 1) * -d) - 0.5f), new Vector2(0, (currentArena + 1) * -d), new Vector3(102, 11, (currentArena+1)*d*11));
     }
 
     void SpawnShop()
     {
-        newShopObj = Instantiate(shopObj, transform);
-        newShopObj.transform.position = new Vector2(0, -d - currentArena * d) + new Vector2(0, 10);
-        print("shop spawned at " + newShopObj.transform.position);
+        newObj = Instantiate(shopObj, transform);
+        newObj.transform.position = currentArenaPos + new Vector2(0.5f, 10.0f);
+        newObj.transform.position += new Vector3(0, 0, -8);
+        //print("shop spawned at " + newObj.transform.position);
+    }
+
+    void DeleteShop()
+    {
+        for(int ii = 0; ii < transform.childCount; ii++)
+        {
+            if (transform.GetChild(ii).gameObject.GetComponent<ShopScript>() != null)
+            {
+                transform.GetChild(ii).gameObject.GetComponent<ShopScript>().CloseShop();
+            }
+        }
+    }
+
+    public void CreateArrow()
+    {
+        newObj = Instantiate(arrowObj, this.transform);
+        newObj.transform.position = currentArenaPos + new Vector2(0.5f, -7.2f);
+        newObj.transform.position += new Vector3(0, 0, -8);
     }
 }

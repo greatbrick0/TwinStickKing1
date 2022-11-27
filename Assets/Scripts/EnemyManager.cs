@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject playerRef;
     public ManagerScript mRef;
+    public GameObject smokeObj;
     [SerializeField] public List<GameObject> powerDrops; //powerup list, used by enemies on death.
     public List<GameObject> enemies;
     GameObject newSpawn;
@@ -124,14 +125,16 @@ public class EnemyManager : MonoBehaviour
         }
         else if( dropRando <= 19) //from 3 to 29 (15%)
         {
-            dropRando = UnityEngine.Random.Range(0, 4); //Power up
+            dropRando = UnityEngine.Random.Range(0, 5); //Power up
             newSpawn = Instantiate(powerDrops[dropRando], this.transform);
             newSpawn.transform.position = dropSpot;
         }
     }
 
-    public void enemyDies()
+    public void enemyDies(Vector2 deathSpot)
     {
+        newSpawn = Instantiate(smokeObj, this.transform);
+        newSpawn.transform.position = deathSpot;
         alive--;
         if (CheckWaveEnded())
         {

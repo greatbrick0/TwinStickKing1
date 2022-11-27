@@ -70,13 +70,13 @@ public class PlayerState : MonoBehaviour
     void Coffee()
     {
         speedBoostTime = 12.0f;
-        Debug.Log($"{heldPowerUp}: Used");
+        //Debug.Log($"{heldPowerUp}: Used");
     }
 
     void HeavyMachineGun()
     {
         attackBoostTime = 16.0f;
-        Debug.Log($"{heldPowerUp}: Used");
+        //Debug.Log($"{heldPowerUp}: Used");
     }
 
     void ScreenNuke()
@@ -87,7 +87,7 @@ public class PlayerState : MonoBehaviour
     void Shotgun()
     {
         shotgunTime = 12.0f;
-        Debug.Log($"{heldPowerUp}: Used");
+        //Debug.Log($"{heldPowerUp}: Used");
     }
 
     void SmokeBomb()
@@ -103,7 +103,7 @@ public class PlayerState : MonoBehaviour
     void WagonWheel()
     {
         octoShotTime = 12.0f;
-        Debug.Log($"{heldPowerUp}: Used");
+        //Debug.Log($"{heldPowerUp}: Used");
     }
 
     void SheriffBadge()
@@ -112,13 +112,13 @@ public class PlayerState : MonoBehaviour
         attackBoostTime = 12.0f;
         shotgunTime = 12.0f;
 
-        Debug.Log($"{heldPowerUp}: Used");
+        //Debug.Log($"{heldPowerUp}: Used");
     }
 
     public void PickUpPowerUp(string pType)
     {
-
-        Debug.Log($"Player Collected {pType}");
+        badges += 1;
+        //Debug.Log($"Player Collected {pType}");
         UsePowerUp();
         heldPowerUp = pType;
     }

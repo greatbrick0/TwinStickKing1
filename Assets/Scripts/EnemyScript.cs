@@ -23,7 +23,7 @@ public class EnemyScript : MonoBehaviour
         if(GetComponent<HealthScript>().health <= 0)
         {
             eManRef.GetComponent<EnemyManager>().spawnDrop(this.transform.position);
-            eManRef.GetComponent<EnemyManager>().enemyDies();
+            eManRef.GetComponent<EnemyManager>().enemyDies(this.transform.position);
             Destroy(this.gameObject);
         }
 
