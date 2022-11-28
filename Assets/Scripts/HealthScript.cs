@@ -25,4 +25,9 @@ public class HealthScript : MonoBehaviour
             return 0;
         }
     }
+
+    public void HealToMax()
+    {
+        health = maxHealth;
+    }
 }

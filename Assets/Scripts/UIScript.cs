@@ -13,7 +13,7 @@ public class UIScript : MonoBehaviour
     public Sprite SG;
     public Sprite C;
     public Sprite WW;
-    ManagerScript mgRef = new ManagerScript();
+    public ManagerScript mgRef;
     PlayerState stateRef;
 
     string item;
@@ -61,6 +61,14 @@ public class UIScript : MonoBehaviour
         else if (stateRef.heldPowerUp == "Wagon Wheel")
         {
             imageBox.sprite = WW;
+        }
+        else if (stateRef.heldPowerUp == "Smoke Bomb")
+        {
+            
+        }
+        else if (stateRef.heldPowerUp == "Tomb Stone")
+        {
+            
         }
     }
 }

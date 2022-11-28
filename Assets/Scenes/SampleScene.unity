@@ -160,6 +160,7 @@ MonoBehaviour:
   SG: {fileID: 21300000, guid: 7ba1ec13858a6cd4db4184bbde5378b4, type: 3}
   C: {fileID: 21300000, guid: eb494b424c5f32747bfd752a5dbc845a, type: 3}
   WW: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  mgRef: {fileID: 1547083532}
 --- !u!4 &99909918
 Transform:
   m_ObjectHideFlags: 0
@@ -598,7 +599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360, y: 105.78}
+  m_AnchoredPosition: {x: -431.6588, y: 105.78}
   m_SizeDelta: {x: 64, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528872630
@@ -754,7 +755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -301.3412, y: 105.40231}
+  m_AnchoredPosition: {x: -373, y: 105.40231}
   m_SizeDelta: {x: 38.9766, y: 32.7641}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645917723
@@ -931,7 +932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -301.3412, y: 42}
+  m_AnchoredPosition: {x: -373, y: 42}
   m_SizeDelta: {x: 38.9766, y: 32.7641}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &703969419
@@ -964,10 +965,10 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x0
+  m_Text: x7
 --- !u!222 &703969420
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1286,6 +1287,8 @@ MonoBehaviour:
   gun: {fileID: 0}
   badges: 0
   heldPowerUp: none
+  swordTime: 0
+  smokebombTime: 0
 --- !u!1 &1053938973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,7 +1873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -363.8155, y: 167.85742}
+  m_AnchoredPosition: {x: -435.4743, y: 167.85742}
   m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1502484038
@@ -2058,6 +2061,8 @@ MonoBehaviour:
   - {fileID: 7225985542192010046, guid: 009ad0395fd3a0243a75ed31f7733127, type: 3}
   enemies:
   - {fileID: 1816768419623509825, guid: 58e0b217ccad978428016957f8bbb640, type: 3}
+  - {fileID: 1816768419623509825, guid: 3716ba6af6aa9a34aa6d4c6de8a9dfff, type: 3}
+  - {fileID: 1816768419623509825, guid: 7ba11712ccaa58a488487741ce4158bc, type: 3}
   alive: 0
   spawnPos: []
 --- !u!1 &1667762986

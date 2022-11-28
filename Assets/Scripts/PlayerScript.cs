@@ -197,8 +197,9 @@ public class PlayerScript : MonoBehaviour
 
     void PlayerDeath()
     {
-        GetComponent<HealthScript>().health = 1;
+        //GetComponent<HealthScript>().health = 1;
         print("player died");
+        transform.parent.gameObject.GetComponent<ManagerScript>().StartPlayerDeath();
         //run other code
     }
 }

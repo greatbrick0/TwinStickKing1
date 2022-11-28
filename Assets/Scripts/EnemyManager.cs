@@ -79,7 +79,7 @@ public class EnemyManager : MonoBehaviour
         for (int i=0; i<4; i++)
         {
            newLocation = spawnPos[i];
-           newLocation.y = newLocation.y - (d * Floor);
+           newLocation.y = newLocation.y - (d);
            spawnPos[i] = newLocation;
         }
     }
@@ -102,14 +102,22 @@ public class EnemyManager : MonoBehaviour
         return currentRoundTime >= spawningDuration && alive <= 0;
     }
 
-    void KillChildren() //Trigger this on player death, plz
+    public void KillChildren() 
     {
         for (int i=0; i<transform.childCount; i++)
         {
             if (transform.GetChild(i).tag == "healthbody")
             {
-                Destroy(transform.GetChild(i).gameObject);
+                transform.GetChild(i).GetComponent<HealthScript>().TakeDamage(10);
             }
+        }
+    }
+
+    public void DestroyChildren() //Trigger this on player death, plz
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
         }
     }
 

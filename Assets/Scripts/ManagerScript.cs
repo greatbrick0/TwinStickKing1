@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ManagerScript : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class ManagerScript : MonoBehaviour
     public int[] shopLevels = new int[] { 1, 3 };
     List<string> storedWaves = new List<string>();
     List<float> storedWavesDuration = new List<float>();
+
+    float deathWaitTime = 0.0f;
+    bool waitingForDeathRestart = false;
 
     public int coinAmount = 0;
     public int liveAmount = 3;
@@ -67,8 +71,8 @@ public class ManagerScript : MonoBehaviour
 
     void Start()
     {
-        //intentionally tedios
-        storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 00:003.6 00:003.0 00:002.4 00:001.4");
+        //intentionally tedious
+        storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 00:003.6 02:003.0 01:002.4 00:001.4");
         storedWavesDuration.Add(012.8f);
         storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 00:003.6 00:003.0 00:002.4 00:001.4");
         storedWavesDuration.Add(012.8f);
@@ -90,6 +94,15 @@ public class ManagerScript : MonoBehaviour
 
     void Update()
     {
+        if (waitingForDeathRestart)
+        {
+            deathWaitTime += 1.0f * Time.deltaTime;
+            if(deathWaitTime >= 2.0f)
+            {
+                FinishPlayerDeath();
+            }
+        }
+
         if (movingArenas)
         {
             arenaTravelTime += 1.0f * Time.deltaTime;
@@ -153,7 +166,7 @@ public class ManagerScript : MonoBehaviour
     {
         if(currentArena == storedWaves.Count)
         {
-            //boss
+            //start boss
         }
         else
         {
@@ -204,5 +217,41 @@ public class ManagerScript : MonoBehaviour
         newObj = Instantiate(arrowObj, this.transform);
         newObj.transform.position = currentArenaPos + new Vector2(0.5f, -7.2f);
         newObj.transform.position += new Vector3(0, 0, -8);
+    }
+
+    public void StartPlayerDeath()
+    {
+        waitingForDeathRestart = true;
+        deathWaitTime = 0.0f;
+        playerRef.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        playerRef.GetComponent<Collider2D>().enabled = false;
+        playerRef.GetComponent<PlayerScript>().enabled = false;
+        playerRef.GetComponent<HealthScript>().HealToMax();
+    }
+
+    void FinishPlayerDeath()
+    {
+        waitingForDeathRestart = false;
+        deathWaitTime = 0.0f;
+        liveAmount--;
+
+        if (liveAmount < 0)
+        {
+            LoseGame();
+        }
+        else
+        {
+            playerRef.GetComponent<Collider2D>().enabled = true;
+            playerRef.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
+            playerRef.GetComponent<PlayerScript>().enabled = true;
+            enemyManager.DestroyChildren();
+            playerRef.transform.position = SetZ(playerTravelNextPos, 0);
+            StartNewArena();
+        }
+    }
+
+    void LoseGame()
+    {
+        SceneManager.LoadScene(3);
     }
 }
