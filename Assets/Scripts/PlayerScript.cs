@@ -180,9 +180,19 @@ public class PlayerScript : MonoBehaviour
             animator.speed.Equals(-1f);
         }
     }
-    void OnCollisionEnter(Collision collision)
+
+    void KatanaAnimation()
     {
-        print(name + " collided with: " + collision.gameObject.name);
+
+    }
+
+    public void TeleportPlayer()
+    {
+        float[] numbers = new float[] {0f, 3f, -3f};
+        float xPos = numbers[Random.Range(0, 2)];
+        float yPos = numbers[Random.Range(0, 2)];
+        body.position = new Vector2(xPos, yPos);
+        Debug.Log(body.position);
     }
 
     void PlayerDeath()

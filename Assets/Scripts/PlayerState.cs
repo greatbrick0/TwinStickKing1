@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
 {
+    public string [] powerUps = new string [5];
     public PlayerScript scriptRef;
     public GunScript gun;//for sake of testing
     public int badges = 0;
@@ -14,8 +15,8 @@ public class PlayerState : MonoBehaviour
     float attackBoostTime = 0.0f;
     float shotgunTime = 0.0f;
     float octoShotTime = 0.0f;
-    public float swordTime = 0.0f; //i figure making this public is better then adding a method. sorry if its a problem -Ethan
-    
+    public float swordTime = 0.0f;
+    public float smokebombTime = 0.0f;
     void Update()
     {
         scriptRef.shootSpeedMod = 1.0f;
@@ -54,10 +55,19 @@ public class PlayerState : MonoBehaviour
         {
             gun.wagonwheel = false;
         }
+        if (smokebombTime >= 0.0f)
+        {
+
+        }
+        if (swordTime >= 0.0f)
+        {
+            swordTime -= 1.0f * Time.deltaTime;
+        }
                 
         if (Input.GetKey(KeyCode.Space))
         {
             UsePowerUp();
+            //powerUps.Remove(heldPowerUp);
         }
     }
 
@@ -70,13 +80,13 @@ public class PlayerState : MonoBehaviour
     void Coffee()
     {
         speedBoostTime = 12.0f;
-        //Debug.Log($"{heldPowerUp}: Used");
+        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void HeavyMachineGun()
     {
         attackBoostTime = 16.0f;
-        //Debug.Log($"{heldPowerUp}: Used");
+        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void ScreenNuke()
@@ -87,23 +97,24 @@ public class PlayerState : MonoBehaviour
     void Shotgun()
     {
         shotgunTime = 12.0f;
-        //Debug.Log($"{heldPowerUp}: Used");
+        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void SmokeBomb()
     {
-
+        scriptRef.TeleportPlayer();
+        smokebombTime = 8.0f;
     }
 
     void TombStone()
     {
-        swordTime = 6.0f;
+        swordTime = 10.0f;
     }
 
     void WagonWheel()
     {
         octoShotTime = 12.0f;
-        //Debug.Log($"{heldPowerUp}: Used");
+        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void SheriffBadge()
@@ -112,13 +123,14 @@ public class PlayerState : MonoBehaviour
         attackBoostTime = 12.0f;
         shotgunTime = 12.0f;
 
-        //Debug.Log($"{heldPowerUp}: Used");
+        Debug.Log($"{heldPowerUp}: Used");
     }
 
     public void PickUpPowerUp(string pType)
     {
         badges += 1;
-        //Debug.Log($"Player Collected {pType}");
+        //powerUps.Add(heldPowerUp);
+        Debug.Log($"Player Collected {pType}");
         UsePowerUp();
         heldPowerUp = pType;
     }
@@ -144,7 +156,15 @@ public class PlayerState : MonoBehaviour
         else if (badges > 0 && heldPowerUp == "Wagon Wheel")
         {
             WagonWheel();
-        }// add more power ups later
+        }
+        else if (badges > 0 && heldPowerUp == "Smoke Bomb")
+        {
+            SmokeBomb();
+        }
+        else if (badges > 0 && heldPowerUp == "Tomb Stone")
+        {
+            TombStone();
+        }
         else
         {
             badges++;
@@ -152,5 +172,16 @@ public class PlayerState : MonoBehaviour
         }
         badges--;
         heldPowerUp = "none";
+    }
+    //This Does Not Work, Needs To Be Fixed
+    void OnCollisionEnter(Collision collision)
+    {
+        GameObject ob = collision.gameObject;
+        Debug.Log($"Player Hit {ob.name}");
+
+        if (ob.tag == "healthbody" && swordTime >= 0.0f)
+        {
+            ob.GetComponent<HealthScript>().TakeDamage(3);
+        }
     }
 }

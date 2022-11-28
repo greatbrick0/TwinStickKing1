@@ -44,7 +44,7 @@ public class BulletScript : MonoBehaviour
         {
             if (targetTeam.Contains(ob.GetComponent<HealthScript>().team))
             {
-                damage = ob.GetComponent<HealthScript>().TakeDamage(damage);
+                damage = ob.GetComponent<HealthScript>().TakeDamage((int)damage);
                 if (damage <= 0)
                 {
                     Destroy(this.gameObject);
