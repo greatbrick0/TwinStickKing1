@@ -7,7 +7,7 @@ public class BulletScript : MonoBehaviour
     float age = 0;
     public float speed;
     public Vector2 direction;
-    public float damage = 1f;
+    public int damage = 1;
 
     public List<string> targetTeam = new List<string>();
 
