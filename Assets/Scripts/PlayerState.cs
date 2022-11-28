@@ -14,7 +14,7 @@ public class PlayerState : MonoBehaviour
     float attackBoostTime = 0.0f;
     float shotgunTime = 0.0f;
     float octoShotTime = 0.0f;
-    float swordTime = 0.0f;
+    public float swordTime = 0.0f; //i figure making this public is better then adding a method. sorry if its a problem -Ethan
     
     void Update()
     {

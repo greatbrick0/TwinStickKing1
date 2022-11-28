@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Enemy1 : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
     public KeyCode space;
 
@@ -13,64 +13,43 @@ public class Enemy1 : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] GameObject player;
     GameObject eManager;
-    [SerializeField] public float speed;
+    [SerializeField] float baseSpeed;
+    float speed;
     bool moving;
-    bool aggressive;
-    bool angry;
-    bool scared; //if player has katana, causes them to run
-    float moveTimerReset = 0;
-    int moveType;
+   // bool aggressive = true; //the bulky enemy is always angry! (does nothing)
+    //bool scared = false; also does nothing. I simplified the brute's decisions, so it isnt needed. just being consistant.
+    //float moveTimerReset = 0;
+    //int moveType;
 
     Vector2 Floor= new Vector2(0,0);
     Vector2 rPosSelect = new Vector2(0, 0);
     
     void Start()
     {
+        speed = baseSpeed;
         eManager = GameObject.Find("EnemyManager");
         Floor = new Vector2(0, 0 + (32 * eManager.GetComponent<EnemyManager>().GetFloor()));
-        aggressive = (UnityEngine.Random.Range(0, 4) == 0); //1/4 of enemies will always attack, as 'aggressive' enemies.
+        //aggressive = (UnityEngine.Random.Range(0, 4) == 0); //1/4 of enemies will always attack, as 'aggressive' enemies.
         enemy = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         _player = player.transform;
-        MoveReset();
     }
 
     void Update()
     {
-        if (DistanceFromPlayer() <= 3)
-            angry = true;
-        else if (!aggressive)
-            angry = false;
-        if (player.GetComponent<PlayerState>().swordTime > 0.0f)
-            scared = true;
-        else
-            scared = false;
-
-        enemy.velocity = Vector2.zero;
-        if (!scared)
+        if (DistanceFromPlayer() < 3)
         {
-
-            if (!angry)
-            {
-                switch (moveType)
-                {
-                    case 0:
-                        MoveAggro();
-                        break;
-                    case 1:
-                        MoveCenter();
-                        break;
-                    default:
-                        MovePassive();
-                        break;
-                }
-            }
-            else
-                MoveAggro();
+            SetSpeed(baseSpeed * 2f);
         }
         else
+            SetSpeed(baseSpeed);
+        enemy.velocity = Vector2.zero;
+        if (player.GetComponent<PlayerState>().swordTime >= 0.0f)
             MoveFlee();
+        else
+            MoveAggro();
         
+
     }
 
     public void SetSpeed(float speed)
@@ -91,39 +70,10 @@ public class Enemy1 : MonoBehaviour
     }
     void FixedUpdate()
     {
-        moveTimerReset+=1.0f * Time.deltaTime;
-        if (moveTimerReset >= 3)
-        {
-            MoveReset();
-            moveTimerReset = 0;
-        }
+       
     }
 
-    public void MoveReset()
-    {
-        int rando = UnityEngine.Random.Range(0, 11);
-        switch (rando)
-        {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-                moveType = 0;
-                break;
-            case 8:
-            case 9:
-                moveType = 1;
-                break;
-            case 10:
-                moveType = 2;
-                rPosSelect = new Vector2(UnityEngine.Random.Range(-7f, 8f), UnityEngine.Random.Range(-7 + Floor.y, 8 + Floor.y));
-                break;
-        }
-    }
+
 
     void MoveAggro()
     {
@@ -141,10 +91,9 @@ public class Enemy1 : MonoBehaviour
     {
         Move(rPosSelect);
     }
-
     void MoveFlee()
     {
-        Move(new Vector2(transform.position.x -_player.position.x,transform.position.y - _player.position.y));
+        Move(new Vector2(transform.position.x - _player.position.x, transform.position.y - _player.position.y));
     }
 
     void Move(Vector2 TargetPosition)
@@ -177,8 +126,8 @@ public class Enemy1 : MonoBehaviour
 
     int DistanceFromPlayer() //casts to int, i assume it floors it. its fineeeeee
     {
-        int xD = (int)(_player.position.x - transform.position.x);
-        int yD = (int)(_player.position.y - transform.position.y);        
+        int xD = (int)(player.transform.position.x - transform.position.x);
+        int yD = (int)(player.transform.position.y - transform.position.y);        
         return (int)Math.Sqrt((xD * xD) + (yD * yD));
 
 
@@ -189,5 +138,4 @@ public class Enemy1 : MonoBehaviour
         if (collide.gameObject.GetComponent<PlayerScript>() != null)
             player.GetComponent<HealthScript>().TakeDamage(1);
     }
-
 }

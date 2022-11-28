@@ -64,11 +64,10 @@ public class EnemyManager : MonoBehaviour
     {
         newSpawn = Instantiate(enemies[ID], this.transform);
         newSpawn.transform.position = spawnPos[UnityEngine.Random.Range(0, spawnPos.Count)];
-        newSpawn.GetComponent<Enemy1>().SetSpeed(2f);
         alive++;
     }
 
-    public int getFloor()
+    public int GetFloor()
     {
         return Floor;
     }
