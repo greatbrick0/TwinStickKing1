@@ -46,7 +46,7 @@ public class Enemy3 : MonoBehaviour
         enemy.velocity = Vector2.zero;
         if (moveTimerReset > 0.0f)
         {
-            enemy.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+            
             if (!scared)
             {
                 MovePassive();
@@ -55,7 +55,8 @@ public class Enemy3 : MonoBehaviour
                 MoveFlee();
         }
         else
-            moveTimerReset -= Time.deltaTime;
+            enemy.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+        moveTimerReset -= Time.deltaTime;
     }
 
     public void SetSpeed(float speed)
