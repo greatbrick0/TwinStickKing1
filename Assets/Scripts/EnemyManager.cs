@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject playerRef;
     public ManagerScript mRef;
+    public Transform timerBarRef;
     public GameObject smokeObj;
     [SerializeField] public List<GameObject> powerDrops; //powerup list, used by enemies on death.
     public List<GameObject> enemies;
@@ -39,6 +40,7 @@ public class EnemyManager : MonoBehaviour
     {
         spawn = true;
         currentRoundTime += Time.deltaTime;
+        UpdateTimerBar();
         while (spawn && spawnDatArray.Count > 0)
         {
             string topSpawn = spawnDatArray.Peek();
@@ -51,13 +53,7 @@ public class EnemyManager : MonoBehaviour
             }
             else
                 spawn = false;
-
         }
-
-       /* if (Input.GetKey(KeyCode.E))
-        {
-            SpawnEnemy(0);
-        } */
     }
 
     void SpawnEnemy(int ID)
@@ -161,5 +157,10 @@ public class EnemyManager : MonoBehaviour
 
             mRef.StageCleared();
         }
+    }
+
+    void UpdateTimerBar()
+    {
+        timerBarRef.GetChild(0).localScale = new Vector2(2, MathF.Min(currentRoundTime / spawningDuration, 1));
     }
 }
