@@ -8,11 +8,14 @@ public class UIScript : MonoBehaviour
     public Image imageBox;
     [SerializeField] Text healthText;
     [SerializeField] Text coinText;
-    public Sprite SB;
-    public Sprite HMG;
-    public Sprite SG;
-    public Sprite C;
-    public Sprite WW;
+    public Sprite kitSprite;
+    public Sprite machineGunSprite;
+    public Sprite shotGunSprite;
+    public Sprite needleSprite;
+    public Sprite octoSprite;
+    public Sprite nukeSprite;
+    public Sprite teleSprite;
+    public Sprite swordSprite;
     public ManagerScript mgRef;
     PlayerState stateRef;
 
@@ -44,31 +47,35 @@ public class UIScript : MonoBehaviour
     {
         if (stateRef.heldPowerUp == "Sheriff Badge")
         {
-            imageBox.sprite = SB;
+            imageBox.sprite = kitSprite;
         }
         else if (stateRef.heldPowerUp == "Heavy Machine Gun")
         {
-            imageBox.sprite = HMG;
+            imageBox.sprite = machineGunSprite;
         }
         else if (stateRef.heldPowerUp == "Shotgun")
         {
-            imageBox.sprite = SG;
+            imageBox.sprite = shotGunSprite;
         }
         else if (stateRef.heldPowerUp == "Coffee")
         {
-            imageBox.sprite = C;
+            imageBox.sprite = needleSprite;
         }
         else if (stateRef.heldPowerUp == "Wagon Wheel")
         {
-            imageBox.sprite = WW;
+            imageBox.sprite = octoSprite;
         }
         else if (stateRef.heldPowerUp == "Smoke Bomb")
         {
-            
+            imageBox.sprite = teleSprite;
         }
         else if (stateRef.heldPowerUp == "Tomb Stone")
         {
-            
+            imageBox.sprite = swordSprite;
+        }
+        else if (stateRef.heldPowerUp == "Screen Nuke")
+        {
+            imageBox.sprite = nukeSprite;
         }
     }
 }
