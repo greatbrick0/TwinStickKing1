@@ -2054,6 +2054,8 @@ MonoBehaviour:
   mRef: {fileID: 1547083532}
   smokeObj: {fileID: 9094317040506404424, guid: f1bad786149a28345a71ced36f11b489, type: 3}
   powerDrops:
+  - {fileID: 5850210150385485723, guid: 063d697cd46ba4b4b99ebeb29fa38730, type: 3}
+  - {fileID: 5850210150385485723, guid: d954d2f6e9dbd9642bffbfa45e91443a, type: 3}
   - {fileID: 7611189522604321173, guid: a39bf28f47e74b44d94f6c56e49a851a, type: 3}
   - {fileID: 7611189522604321173, guid: 9e8e45adb62d7384886666c9272587f4, type: 3}
   - {fileID: 7611189522604321173, guid: 62655e6a0224fed4ba1a4507dabfbbfc, type: 3}

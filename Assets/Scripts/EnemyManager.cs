@@ -125,14 +125,23 @@ public class EnemyManager : MonoBehaviour
     {
         int dropRando = UnityEngine.Random.Range(0, 100);
 
-        if(dropRando <= 2) //from 0 to 2 (3%)
+        if(dropRando <= 24) //from 0 to 25 (25%)
         {
-            //newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
-            //newSpawn.transform.position = dropSpot;
+            dropRando = UnityEngine.Random.Range(0, 4);
+            if(dropRando == 3)
+            {
+                newSpawn = Instantiate(powerDrops[1], this.transform); //50 credit
+                newSpawn.transform.position = dropSpot;
+            }
+            else
+            {
+                newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
+                newSpawn.transform.position = dropSpot;
+            }
         }
-        else if( dropRando <= 19) //from 3 to 29 (15%)
+        else if( dropRando <= 40) //from 26 to 40 (15%)
         {
-            dropRando = UnityEngine.Random.Range(0, 5); //Power up
+            dropRando = UnityEngine.Random.Range(2, 7); //Power up
             newSpawn = Instantiate(powerDrops[dropRando], this.transform);
             newSpawn.transform.position = dropSpot;
         }
