@@ -20,6 +20,9 @@ public class Enemy3 : MonoBehaviour
     bool scared; //if player has katana, causes them to run
     float moveTimerReset = 0;
     int moveType;
+    bool frozen;
+    float timeSpentFrozen = 0.0f;
+    public List<Sprite> spriteList;
 
     Vector2 Floor= new Vector2(0,0);
     Vector2 rPosSelect = new Vector2(0, 0);
@@ -56,8 +59,13 @@ public class Enemy3 : MonoBehaviour
         }
         else
         {
-            enemy.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-            GetComponent<HealthScript>().TakeDamage(-5);
+            if (!frozen)
+            {
+                enemy.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+                GetComponent<HealthScript>().TakeDamage(-5);
+                frozen = true;
+                
+            }
         }
         moveTimerReset -= Time.deltaTime;
     }

@@ -132,6 +132,14 @@ MonoBehaviour:
   _player: {fileID: 0}
   player: {fileID: 0}
   speed: 4
+  spriteList:
+  - {fileID: -1067257963, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  - {fileID: 1804554999, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  - {fileID: 58648589, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  - {fileID: 1774424449, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  - {fileID: -1538885533, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  - {fileID: 1152693486, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  - {fileID: -1167697619, guid: fe40680e372f7654c8933540488e5fad, type: 3}
 --- !u!1 &3789949751996342991
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,8 +213,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e234f58b7bff05f4bbe38041c66d6b5f, type: 3}
-  m_Color: {r: 0.94509804, g: 0.54509807, b: 0.5701095, a: 1}
+  m_Sprite: {fileID: -1067257963, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
