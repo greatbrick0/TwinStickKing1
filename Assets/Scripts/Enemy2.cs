@@ -135,7 +135,12 @@ public class Enemy2 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collide)
     {
-        if (collide.gameObject.GetComponent<PlayerScript>() != null)
-            player.GetComponent<HealthScript>().TakeDamage(1);
+        if(collide.gameObject.GetComponent<PlayerScript>() != null)
+        {
+            if (player.GetComponent<PlayerState>().swordTime > 0.0f)
+                player.GetComponent<HealthScript>().TakeDamage(1);
+            else
+                GetComponent<HealthScript>().TakeDamage(10);
+        }
     }
 }

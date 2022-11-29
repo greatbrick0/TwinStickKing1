@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour
     float frameTimer = 0.0f;
     int currentFrame = 0;
 
+    bool isWalking = true;
     void Start()
     {
         eManRef = transform.parent.gameObject;
@@ -37,11 +38,14 @@ public class EnemyScript : MonoBehaviour
 
     void SwitchFrames()
     {
-        currentFrame++;
-        if(currentFrame >= frames.Count)
+        if (isWalking)
         {
-            currentFrame = 0;
+            currentFrame++;
+            if (currentFrame >= frames.Count)
+            {
+                currentFrame = 0;
+            }
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = frames[currentFrame];
         }
-        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = frames[currentFrame];
     }
 }

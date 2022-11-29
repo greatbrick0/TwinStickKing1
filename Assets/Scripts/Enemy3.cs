@@ -21,6 +21,7 @@ public class Enemy3 : MonoBehaviour
     float moveTimerReset = 0;
     int moveType;
     bool frozen;
+    bool frozeAnimStarted
     float timeSpentFrozen = 0.0f;
     public List<Sprite> spriteList;
 
@@ -40,7 +41,11 @@ public class Enemy3 : MonoBehaviour
 
     void Update()
     {
-        
+        if (frozen && !frozeAnimStarted)
+        {
+            PlaySitAnimation();
+            frozeAnimStarted = true;
+        }
         if (player.GetComponent<PlayerState>().swordTime > 0.0f)
             scared = true;
         else
@@ -139,8 +144,17 @@ public class Enemy3 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collide)
     {
-        if (collide.gameObject.GetComponent<PlayerScript>() != null)
-            player.GetComponent<HealthScript>().TakeDamage(1);
+        if(collide.gameObject.GetComponent<PlayerScript>() != null)
+        {
+            if (player.GetComponent<PlayerState>().swordTime > 0.0f)
+                player.GetComponent<HealthScript>().TakeDamage(1);
+            else
+                GetComponent<HealthScript>().TakeDamage(10);
+        }
     }
 
+    void PlaySitAnimation()
+    {
+
+    }
 }

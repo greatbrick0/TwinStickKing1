@@ -113,8 +113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eManRef: {fileID: 0}
   frames:
-  - {fileID: 21300000, guid: fc539328fb53f384192769cd041a63c0, type: 3}
-  - {fileID: 21300000, guid: e234f58b7bff05f4bbe38041c66d6b5f, type: 3}
+  - {fileID: -1067257963, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  - {fileID: 1804554999, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+  - {fileID: 58648589, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   frameTime: 0.4
 --- !u!114 &-6508121169871385613
 MonoBehaviour:
