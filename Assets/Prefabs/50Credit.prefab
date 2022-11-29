@@ -157,4 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mgRef: {fileID: 0}
+<<<<<<< HEAD
   value: 50
+=======
+  credit: []
+>>>>>>> main
