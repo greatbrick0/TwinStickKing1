@@ -152,6 +152,7 @@ public class EnemyManager : MonoBehaviour
         newSpawn = Instantiate(smokeObj, this.transform);
         newSpawn.transform.position = deathSpot;
         alive--;
+        GetComponent<AudioSource>().Play();
         if (CheckWaveEnded())
         {
             Debug.Log("Wave Ended.");
