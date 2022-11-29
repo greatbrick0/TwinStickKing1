@@ -142,7 +142,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 023cf27646877664db898c7910d90cc1, type: 3}
   - {fileID: 21300000, guid: 11547ecaaf3d8a94db4e791964fc5be7, type: 3}
   - {fileID: 21300000, guid: 897b89c2170047f4984558e6fe716fb2, type: 3}
-  - {fileID: 21300000, guid: 22a26757632f86042a455e947cdfff25, type: 3}
+  - {fileID: 21300000, guid: 68f1476508656cd4c9a2a72c6ec5d603, type: 3}
   - {fileID: 21300000, guid: d6fefdfe62923744dba175fc53ceaf96, type: 3}
   cost: 10
 --- !u!61 &5771391692129904902
