@@ -100,6 +100,7 @@ public class ShopScript : MonoBehaviour
     public void Purchased()
     {
         purchaseAmount += 1;
+        GetComponent<AudioSource>().Play();
         if(purchaseAmount >= maxPurchases)
         {
             managerRef.CreateArrow();

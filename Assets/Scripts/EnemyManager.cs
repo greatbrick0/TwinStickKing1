@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject playerRef;
     public ManagerScript mRef;
+    public Transform timerBarRef;
     public GameObject smokeObj;
     [SerializeField] public List<GameObject> powerDrops; //powerup list, used by enemies on death.
     public List<GameObject> enemies;
@@ -39,6 +40,7 @@ public class EnemyManager : MonoBehaviour
     {
         spawn = true;
         currentRoundTime += Time.deltaTime;
+        UpdateTimerBar();
         while (spawn && spawnDatArray.Count > 0)
         {
             string topSpawn = spawnDatArray.Peek();
@@ -51,13 +53,7 @@ public class EnemyManager : MonoBehaviour
             }
             else
                 spawn = false;
-
         }
-
-       /* if (Input.GetKey(KeyCode.E))
-        {
-            SpawnEnemy(0);
-        } */
     }
 
     void SpawnEnemy(int ID)
@@ -115,6 +111,7 @@ public class EnemyManager : MonoBehaviour
 
     public void DestroyChildren() //Trigger this on player death, plz
     {
+        alive = 0;
         for (int i = 0; i < transform.childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject);
@@ -125,14 +122,23 @@ public class EnemyManager : MonoBehaviour
     {
         int dropRando = UnityEngine.Random.Range(0, 100);
 
-        if(dropRando <= 2) //from 0 to 2 (3%)
+        if(dropRando <= 24) //from 0 to 25 (25%)
         {
-            //newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
-            //newSpawn.transform.position = dropSpot;
+            dropRando = UnityEngine.Random.Range(0, 4);
+            if(dropRando == 3)
+            {
+                newSpawn = Instantiate(powerDrops[1], this.transform); //50 credit
+                newSpawn.transform.position = dropSpot;
+            }
+            else
+            {
+                newSpawn = Instantiate(powerDrops[0], this.transform); //10Credit
+                newSpawn.transform.position = dropSpot;
+            }
         }
-        else if( dropRando <= 19) //from 3 to 29 (15%)
+        else if( dropRando <= 40) //from 26 to 40 (15%)
         {
-            dropRando = UnityEngine.Random.Range(0, 5); //Power up
+            dropRando = UnityEngine.Random.Range(2, 7); //Power up
             newSpawn = Instantiate(powerDrops[dropRando], this.transform);
             newSpawn.transform.position = dropSpot;
         }
@@ -143,6 +149,7 @@ public class EnemyManager : MonoBehaviour
         newSpawn = Instantiate(smokeObj, this.transform);
         newSpawn.transform.position = deathSpot;
         alive--;
+        GetComponent<AudioSource>().Play();
         if (CheckWaveEnded())
         {
             Debug.Log("Wave Ended.");
@@ -150,5 +157,10 @@ public class EnemyManager : MonoBehaviour
 
             mRef.StageCleared();
         }
+    }
+
+    void UpdateTimerBar()
+    {
+        timerBarRef.GetChild(0).localScale = new Vector2(2, MathF.Min(currentRoundTime / spawningDuration, 1));
     }
 }
