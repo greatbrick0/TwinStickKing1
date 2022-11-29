@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public List<AudioSource> playerSounds;
     public Animator animator;
 
     Rigidbody2D body;
@@ -39,7 +40,7 @@ public class PlayerScript : MonoBehaviour
             animator.SetBool("movingUp", true);
             CheckShootingDirection();
         }
-         else if (Input.GetKey(KeyCode.A) == true)
+        else if (Input.GetKey(KeyCode.A) == true)
         {
             animator.speed.Equals(1f);
             animator.SetBool("movingLeft", true);
@@ -88,6 +89,7 @@ public class PlayerScript : MonoBehaviour
     {
         if(GetComponent<HealthScript>().health <= 0)
         {
+            playerSounds[1].Play();
             PlayerDeath();
         }
 
@@ -97,6 +99,7 @@ public class PlayerScript : MonoBehaviour
             if(gun.Shoot(shootDirection, baseDamage, bulletNumMod))
             {
                 gun.Reload(baseShootSpeed * shootSpeedMod);
+                playerSounds[0].Play();
             }
         }
     }
@@ -201,5 +204,10 @@ public class PlayerScript : MonoBehaviour
         print("player died");
         transform.parent.gameObject.GetComponent<ManagerScript>().StartPlayerDeath();
         //run other code
+    }
+
+    public void PickUpCoin(int coinValue)
+    {
+        playerSounds[2].Play();
     }
 }

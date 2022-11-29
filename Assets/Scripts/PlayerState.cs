@@ -8,6 +8,7 @@ public class PlayerState : MonoBehaviour
     public string [] powerUps = new string [5];
     public PlayerScript scriptRef;
     public GunScript gun;//for sake of testing
+    public AudioSource powerUpSound;
     public int badges = 0;
     public string heldPowerUp = "none";
 
@@ -128,39 +129,39 @@ public class PlayerState : MonoBehaviour
 
     void UsePowerUp(string usedPowerUp)
     {
-        if (badges > 0 && usedPowerUp == "Sheriff Badge")
+        if(usedPowerUp != "none")
         {
-            SheriffBadge();
+            powerUpSound.Play();
+            if (badges > 0 && usedPowerUp == "Sheriff Badge")
+            {
+                SheriffBadge();
+            }
+            else if (badges > 0 && usedPowerUp == "Heavy Machine Gun")
+            {
+                HeavyMachineGun();
+            }
+            else if (badges > 0 && usedPowerUp == "Shotgun")
+            {
+                Shotgun();
+            }
+            else if (badges > 0 && usedPowerUp == "Coffee")
+            {
+                Coffee();
+            }
+            else if (badges > 0 && usedPowerUp == "Wagon Wheel")
+            {
+                WagonWheel();
+            }
+            else if (badges > 0 && usedPowerUp == "Smoke Bomb")
+            {
+                SmokeBomb();
+            }
+            else if (badges > 0 && usedPowerUp == "Tomb Stone")
+            {
+                TombStone();
+            }
+            badges--;
         }
-        else if (badges > 0 && usedPowerUp == "Heavy Machine Gun")
-        {
-            HeavyMachineGun();
-        }
-        else if (badges > 0 && usedPowerUp == "Shotgun")
-        {
-            Shotgun();
-        }
-        else if (badges > 0 && usedPowerUp == "Coffee")
-        {
-            Coffee();
-        } 
-        else if (badges > 0 && usedPowerUp == "Wagon Wheel")
-        {
-            WagonWheel();
-        }
-        else if (badges > 0 && usedPowerUp == "Smoke Bomb")
-        {
-            SmokeBomb();
-        }
-        else if (badges > 0 && usedPowerUp == "Tomb Stone")
-        {
-            TombStone();
-        }
-        else
-        {
-            badges++;
-        }
-        badges--;
     }
     //This Does Not Work, Needs To Be Fixed
     void OnCollisionEnter(Collision collision)

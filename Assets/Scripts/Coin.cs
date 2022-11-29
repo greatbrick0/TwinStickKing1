@@ -18,6 +18,7 @@ public class Coin : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerScript>() != null)
         {
+            collision.gameObject.GetComponent<PlayerScript>().PickUpCoin(value);
             mgRef.coinAmount += value;
             Destroy(this.gameObject);
         }
