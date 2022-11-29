@@ -1443,6 +1443,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d06a23e08bdd841825ffa08e0bfb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy:
+  - {fileID: 1816768419623509825, guid: 58e0b217ccad978428016957f8bbb640, type: 3}
+  - {fileID: 1816768419623509825, guid: 3716ba6af6aa9a34aa6d4c6de8a9dfff, type: 3}
+  - {fileID: 1816768419623509825, guid: 7ba11712ccaa58a488487741ce4158bc, type: 3}
   powerUps: []
   scriptRef: {fileID: 1028864222}
   gun: {fileID: 1028864225}

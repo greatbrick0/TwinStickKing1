@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class PlayerState : MonoBehaviour
 {
+    public GameObject [] enemy;
     public string [] powerUps = new string [5];
     public PlayerScript scriptRef;
     public GunScript gun;//for sake of testing
@@ -83,7 +85,16 @@ public class PlayerState : MonoBehaviour
 
     void ScreenNuke()
     {
-
+        for (int i = 0; i <= 2; i++)
+        {
+            if (enemy[i].GetComponentInChildren<SpriteRenderer>().isVisible)
+            {
+                enemy[i].GetComponent<HealthScript>().TakeDamage(3);
+                print($" enemy health: {enemy[i].GetComponent<HealthScript>().health}");
+            }
+            print(i);
+        }
+        
     }
 
     void Shotgun()
@@ -159,6 +170,10 @@ public class PlayerState : MonoBehaviour
             else if (badges > 0 && usedPowerUp == "Tomb Stone")
             {
                 TombStone();
+            }
+            else if(badges > 0 && usedPowerUp == "Screen Nuke")
+            {
+                ScreenNuke();
             }
             badges--;
         }
