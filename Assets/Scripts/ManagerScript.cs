@@ -167,6 +167,7 @@ public class ManagerScript : MonoBehaviour
         if(currentArena == storedWaves.Count)
         {
             //start boss
+            print("spawn boss");
         }
         else
         {

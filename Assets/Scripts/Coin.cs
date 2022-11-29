@@ -5,14 +5,12 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public ManagerScript mgRef;
-    GameObject player;
 
     public int value = 10;
 
     void Start()
     {
         mgRef = GameObject.Find("Manager").GetComponent<ManagerScript>();
-        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame

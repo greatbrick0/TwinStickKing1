@@ -2004,7 +2004,7 @@ MonoBehaviour:
   d: 32
   arenaTravelDuration: 4
   shopLevels: 000000000100000003000000
-  coinAmount: 1200
+  coinAmount: 0
   liveAmount: 3
 --- !u!1 &1572718917
 GameObject:

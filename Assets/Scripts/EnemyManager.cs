@@ -115,6 +115,7 @@ public class EnemyManager : MonoBehaviour
 
     public void DestroyChildren() //Trigger this on player death, plz
     {
+        alive = 0;
         for (int i = 0; i < transform.childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject);

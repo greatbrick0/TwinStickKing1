@@ -25,7 +25,7 @@ public class PlayerState : MonoBehaviour
 
         if (shotgunTime >= 0.0f)
         {
-            scriptRef.shootSpeedMod *= 1.5f; // slower attack speed
+            scriptRef.shootSpeedMod *= 1.3f; // slower attack speed
             scriptRef.bulletNumMod = 3;
             shotgunTime -= 1.0f * Time.deltaTime;
         }
@@ -41,13 +41,6 @@ public class PlayerState : MonoBehaviour
         }
         if(octoShotTime >= 0.0f)
         {
-            //Vector2 newoutputVector = new Vector2(1, 1);
-            //scriptRef.shootDirection = newoutputVector;
-            
-            //while (octoShotTime >= 0.0f)
-            //{
-              //  gun.Shoot(outputVector, 1, 1);
-            //}
             gun.wagonwheel = true;
             octoShotTime -= 1.0f * Time.deltaTime;
         }
@@ -64,10 +57,10 @@ public class PlayerState : MonoBehaviour
             swordTime -= 1.0f * Time.deltaTime;
         }
                 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && heldPowerUp != "none")
         {
-            UsePowerUp();
-            //powerUps.Remove(heldPowerUp);
+            UsePowerUp(heldPowerUp);
+            heldPowerUp = "none";
         }
     }
 
@@ -80,13 +73,11 @@ public class PlayerState : MonoBehaviour
     void Coffee()
     {
         speedBoostTime = 12.0f;
-        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void HeavyMachineGun()
     {
         attackBoostTime = 16.0f;
-        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void ScreenNuke()
@@ -97,7 +88,6 @@ public class PlayerState : MonoBehaviour
     void Shotgun()
     {
         shotgunTime = 12.0f;
-        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void SmokeBomb()
@@ -114,7 +104,6 @@ public class PlayerState : MonoBehaviour
     void WagonWheel()
     {
         octoShotTime = 12.0f;
-        Debug.Log($"{heldPowerUp}: Used");
     }
 
     void SheriffBadge()
@@ -122,56 +111,56 @@ public class PlayerState : MonoBehaviour
         speedBoostTime = 12.0f;
         attackBoostTime = 12.0f;
         shotgunTime = 12.0f;
-
-        Debug.Log($"{heldPowerUp}: Used");
     }
 
     public void PickUpPowerUp(string pType)
     {
         badges += 1;
-        //powerUps.Add(heldPowerUp);
-        Debug.Log($"Player Collected {pType}");
-        UsePowerUp();
-        heldPowerUp = pType;
+        if(heldPowerUp == "none")
+        {
+            heldPowerUp = pType;
+        }
+        else
+        {
+            UsePowerUp(pType);
+        }
     }
 
-    void UsePowerUp()
+    void UsePowerUp(string usedPowerUp)
     {
-        if (badges > 0 && heldPowerUp == "Sheriff Badge")
+        if (badges > 0 && usedPowerUp == "Sheriff Badge")
         {
             SheriffBadge();
         }
-        else if (badges > 0 && heldPowerUp == "Heavy Machine Gun")
+        else if (badges > 0 && usedPowerUp == "Heavy Machine Gun")
         {
             HeavyMachineGun();
         }
-        else if (badges > 0 && heldPowerUp == "Shotgun")
+        else if (badges > 0 && usedPowerUp == "Shotgun")
         {
             Shotgun();
         }
-        else if (badges > 0 && heldPowerUp == "Coffee")
+        else if (badges > 0 && usedPowerUp == "Coffee")
         {
             Coffee();
         } 
-        else if (badges > 0 && heldPowerUp == "Wagon Wheel")
+        else if (badges > 0 && usedPowerUp == "Wagon Wheel")
         {
             WagonWheel();
         }
-        else if (badges > 0 && heldPowerUp == "Smoke Bomb")
+        else if (badges > 0 && usedPowerUp == "Smoke Bomb")
         {
             SmokeBomb();
         }
-        else if (badges > 0 && heldPowerUp == "Tomb Stone")
+        else if (badges > 0 && usedPowerUp == "Tomb Stone")
         {
             TombStone();
         }
         else
         {
             badges++;
-            //print(heldPowerUp + badges);
         }
         badges--;
-        heldPowerUp = "none";
     }
     //This Does Not Work, Needs To Be Fixed
     void OnCollisionEnter(Collision collision)
