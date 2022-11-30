@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour
     float frameTimer = 0.0f;
     int currentFrame = 0;
 
-    bool isWalking = true;
+    public bool isWalking = true;
     void Start()
     {
         eManRef = transform.parent.gameObject;
@@ -29,13 +29,13 @@ public class EnemyScript : MonoBehaviour
         }
 
         frameTimer += 1.0f * Time.deltaTime;
-        if(frameTimer >= frameTime)
+        if(frameTimer >= frameTime && isWalking)
         {
             SwitchFrames();
             frameTimer = 0.0f;
         }
     }
-
+    
     void SwitchFrames()
     {
         if (isWalking)

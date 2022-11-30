@@ -53,7 +53,7 @@ public class PlayerState : MonoBehaviour
         }
         if (smokebombTime >= 0.0f)
         {
-
+            smokebombTime -= 1.0f * Time.deltaTime;
         }
         if (swordTime >= 0.0f)
         {
@@ -85,7 +85,8 @@ public class PlayerState : MonoBehaviour
 
     void ScreenNuke()
     {
-        for (int i = 0; i <= 2; i++)
+        GameObject.Find("EnemyManager").GetComponent<EnemyManager>().KillChildren();
+        /*for (int i = 0; i <= 2; i++)      Not sure what any of this is. im just gunna blow everyone up with enemyManager.
         {
             if (enemy[i].GetComponentInChildren<SpriteRenderer>().isVisible)
             {
@@ -93,7 +94,7 @@ public class PlayerState : MonoBehaviour
                 print($" enemy health: {enemy[i].GetComponent<HealthScript>().health}");
             }
             print(i);
-        }
+        } */
         
     }
 

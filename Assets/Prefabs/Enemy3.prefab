@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 9150491400787194780}
   - component: {fileID: 5978766419997307709}
   - component: {fileID: -6508121169871385613}
+  - component: {fileID: -1567343060246583697}
+  - component: {fileID: 8641303007840275933}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Untagged
@@ -117,6 +119,7 @@ MonoBehaviour:
   - {fileID: 1804554999, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   - {fileID: 58648589, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   frameTime: 0.4
+  isWalking: 1
 --- !u!114 &-6508121169871385613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +136,7 @@ MonoBehaviour:
   _player: {fileID: 0}
   player: {fileID: 0}
   speed: 4
+  animator: {fileID: 8641303007840275933}
   spriteList:
   - {fileID: -1067257963, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   - {fileID: 1804554999, guid: fe40680e372f7654c8933540488e5fad, type: 3}
@@ -141,6 +145,43 @@ MonoBehaviour:
   - {fileID: -1538885533, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   - {fileID: 1152693486, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   - {fileID: -1167697619, guid: fe40680e372f7654c8933540488e5fad, type: 3}
+--- !u!111 &-1567343060246583697
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816768419623509825}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: ff6e87adbde713a40938407f708816b8, type: 2}
+  - {fileID: 7400000, guid: 6b13bb615547ccf4bb2072be6f6117b8, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &8641303007840275933
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816768419623509825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f46a6ca47804d714e8562abce0f41a55, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3789949751996342991
 GameObject:
   m_ObjectHideFlags: 0

@@ -98,30 +98,33 @@ public class Enemy2 : MonoBehaviour
 
     void Move(Vector2 TargetPosition)
     {
-        Vector2 moveVCount = new Vector2(0, 0);
-        if (transform.position.y < TargetPosition.y)
+        if (player.GetComponent<PlayerState>().smokebombTime <= 0.0f)
         {
-            moveVCount.y++;
+            Vector2 moveVCount = new Vector2(0, 0);
+            if (transform.position.y < TargetPosition.y)
+            {
+                moveVCount.y++;
+            }
+            if (transform.position.y > TargetPosition.y)
+            {
+                moveVCount.y--;
+            }
+            if (transform.position.x < TargetPosition.x)
+            {
+                moveVCount.x++;
+            }
+            if (transform.position.x > TargetPosition.x)
+            {
+                moveVCount.x--;
+            }
+            if (moveVCount.x != 0 && moveVCount.y != 0)
+            {
+                moveVCount.x /= 2;
+                moveVCount.y /= 2;
+            }
+            //transform.position = Vector2.MoveTowards(transform.position, Line, move);
+            enemy.velocity = moveVCount * speed;
         }
-        if (transform.position.y > TargetPosition.y)
-        {
-            moveVCount.y--;
-        }
-        if (transform.position.x < TargetPosition.x)
-        {
-            moveVCount.x++;
-        }
-        if (transform.position.x > TargetPosition.x)
-        {
-            moveVCount.x--;
-        }
-        if (moveVCount.x != 0 && moveVCount.y != 0)
-        {
-            moveVCount.x /= 2;
-            moveVCount.y /= 2;
-        }
-        //transform.position = Vector2.MoveTowards(transform.position, Line, move);
-        enemy.velocity = moveVCount * speed;
     }
 
     int DistanceFromPlayer() //casts to int, i assume it floors it. its fineeeeee
@@ -137,7 +140,7 @@ public class Enemy2 : MonoBehaviour
     {
         if(collide.gameObject.GetComponent<PlayerScript>() != null)
         {
-            if (player.GetComponent<PlayerState>().swordTime > 0.0f)
+            if (player.GetComponent<PlayerState>().swordTime <= 0.0f)
                 player.GetComponent<HealthScript>().TakeDamage(1);
             else
                 GetComponent<HealthScript>().TakeDamage(10);

@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Enemy3 : MonoBehaviour
 {
     public KeyCode space;
-
     Rigidbody2D enemy;
     Collider2D eColl;
     [SerializeField] private Transform _player;
@@ -15,14 +14,15 @@ public class Enemy3 : MonoBehaviour
     GameObject eManager;
     [SerializeField] public float speed;
     bool moving;
+    public Animator animator;
     //bool aggressive;
     //bool angry;
     bool scared; //if player has katana, causes them to run
     float moveTimerReset = 0;
     int moveType;
     bool frozen;
-    bool frozeAnimStarted
-    float timeSpentFrozen = 0.0f;
+    bool frozeAnimStarted = false;
+   // float timeSpentFrozen = 0.0f;
     public List<Sprite> spriteList;
 
     Vector2 Floor= new Vector2(0,0);
@@ -30,7 +30,8 @@ public class Enemy3 : MonoBehaviour
     
     void Start()
     {
-        moveTimerReset = 5.0f;
+        GetComponent<EnemyScript>().isWalking = false;
+        moveTimerReset = 4.0f;
         eManager = GameObject.Find("EnemyManager");
         Floor = new Vector2(0, 0 + (32 * eManager.GetComponent<EnemyManager>().GetFloor()));
         rPosSelect = new Vector2(UnityEngine.Random.Range(-4f, 5f), UnityEngine.Random.Range(-4 + Floor.y, 5 + Floor.y)); //finds targer location on spawn
@@ -107,30 +108,33 @@ public class Enemy3 : MonoBehaviour
 
     void Move(Vector2 TargetPosition)
     {
-        Vector2 moveVCount = new Vector2(0, 0);
-        if (transform.position.y < TargetPosition.y)
+        if (player.GetComponent<PlayerState>().smokebombTime <= 0.0f)
         {
-            moveVCount.y++;
+            Vector2 moveVCount = new Vector2(0, 0);
+            if (transform.position.y < TargetPosition.y)
+            {
+                moveVCount.y++;
+            }
+            if (transform.position.y > TargetPosition.y)
+            {
+                moveVCount.y--;
+            }
+            if (transform.position.x < TargetPosition.x)
+            {
+                moveVCount.x++;
+            }
+            if (transform.position.x > TargetPosition.x)
+            {
+                moveVCount.x--;
+            }
+            if (moveVCount.x != 0 && moveVCount.y != 0)
+            {
+                moveVCount.x /= 2;
+                moveVCount.y /= 2;
+            }
+            //transform.position = Vector2.MoveTowards(transform.position, Line, move);
+            enemy.velocity = moveVCount * speed;
         }
-        if (transform.position.y > TargetPosition.y)
-        {
-            moveVCount.y--;
-        }
-        if (transform.position.x < TargetPosition.x)
-        {
-            moveVCount.x++;
-        }
-        if (transform.position.x > TargetPosition.x)
-        {
-            moveVCount.x--;
-        }
-        if (moveVCount.x != 0 && moveVCount.y != 0)
-        {
-            moveVCount.x /= 2;
-            moveVCount.y /= 2;
-        }
-        //transform.position = Vector2.MoveTowards(transform.position, Line, move);
-        enemy.velocity = moveVCount * speed;
     }
 
     int DistanceFromPlayer() //casts to int, i assume it floors it. its fineeeeee
@@ -146,7 +150,7 @@ public class Enemy3 : MonoBehaviour
     {
         if(collide.gameObject.GetComponent<PlayerScript>() != null)
         {
-            if (player.GetComponent<PlayerState>().swordTime > 0.0f)
+            if (player.GetComponent<PlayerState>().swordTime <= 0.0f)
                 player.GetComponent<HealthScript>().TakeDamage(1);
             else
                 GetComponent<HealthScript>().TakeDamage(10);
@@ -155,6 +159,6 @@ public class Enemy3 : MonoBehaviour
 
     void PlaySitAnimation()
     {
-
+        animator.SetBool("frozen", true);
     }
 }
