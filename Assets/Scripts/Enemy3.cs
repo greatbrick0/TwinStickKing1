@@ -139,8 +139,17 @@ public class Enemy3 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collide)
     {
-        if (collide.gameObject.GetComponent<PlayerScript>() != null)
-            player.GetComponent<HealthScript>().TakeDamage(1);
+        if (!scared /* && lostPlayer (player teleported) */)
+        {
+            if (collide.gameObject.GetComponent<PlayerScript>() != null)
+                player.GetComponent<HealthScript>().TakeDamage(1);
+        }
+        else if (scared)
+        {
+            if (collide.gameObject.GetComponent<PlayerScript>() != null)
+                this.gameObject.GetComponent<HealthScript>().TakeDamage(10);
+        }
+        //
     }
 
 }
