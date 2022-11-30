@@ -11,11 +11,21 @@ public class BulletScript : MonoBehaviour
 
     public List<string> targetTeam = new List<string>();
 
+    public List<Sprite> bulletSprites;
+
     Rigidbody2D body;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        if(damage < bulletSprites.Count)
+        {
+            transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = bulletSprites[damage - 1];
+        }
+        else
+        {
+            transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = bulletSprites[bulletSprites.Count - 1];
+        }
     }
 
     void Update()
