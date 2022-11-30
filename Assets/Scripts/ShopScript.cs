@@ -8,6 +8,7 @@ public class ShopScript : MonoBehaviour
     GameObject newUpgradeObj;
     ManagerScript managerRef;
 
+    public List<Sprite> droneSprites;
     public string state = "descend";
     float stateDuration = 0.0f;
     public float flySpeed = 5.0f;
@@ -53,6 +54,7 @@ public class ShopScript : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = droneSprites[Mathf.FloorToInt((stateDuration * 8) % droneSprites.Count)];
     }
 
     public void SpawnUpgrades()
