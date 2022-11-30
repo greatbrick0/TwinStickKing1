@@ -9,13 +9,14 @@ public class Enemy2 : MonoBehaviour
     public KeyCode space;
 
     Rigidbody2D enemy;
-
+    RigidbodyConstraints2D ogconstraints;
     [SerializeField] private Transform _player;
     [SerializeField] GameObject player;
     GameObject eManager;
     [SerializeField] float baseSpeed;
     float speed;
     bool moving;
+    bool lostPlayer;
     bool scared;//using this scared bool for when they die from the katana, name is "scared" to align with other enemeis
    // bool aggressive = true; //the bulky enemy is always angry! (does nothing)
     //bool scared = false; also does nothing. I simplified the brute's decisions, so it isnt needed. just being consistant.
@@ -34,6 +35,7 @@ public class Enemy2 : MonoBehaviour
         enemy = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
         _player = player.transform;
+        ogconstraints = enemy.constraints;
     }
 
     void Update()
@@ -52,8 +54,14 @@ public class Enemy2 : MonoBehaviour
         }
         else
             MoveAggro();
-        
 
+        if (player.GetComponent<PlayerState>().smokebombTime > 0.0f)
+        {
+            lostPlayer = true;
+            //PlayerTeleported();
+        }
+        else
+            lostPlayer = false;
     }
 
     public void SetSpeed(float speed)
@@ -74,10 +82,11 @@ public class Enemy2 : MonoBehaviour
     }
     void FixedUpdate()
     {
-       
+        if (lostPlayer)
+        {
+            enemy.velocity = new Vector2(0, 0);
+        }
     }
-
-
 
     void MoveAggro()
     {
@@ -137,9 +146,17 @@ public class Enemy2 : MonoBehaviour
 
     }
 
+    void PlayerTeleported()
+    {
+        if (lostPlayer)
+            enemy.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+
+        else
+            enemy.constraints = ogconstraints;
+    }
     void OnCollisionEnter2D(Collision2D collide)
     {
-        if (!scared /* && lostPlayer (player teleported) */)
+        if (!scared && !lostPlayer)
         {
             if (collide.gameObject.GetComponent<PlayerScript>() != null)
                 player.GetComponent<HealthScript>().TakeDamage(1);

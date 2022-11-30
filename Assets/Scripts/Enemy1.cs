@@ -9,7 +9,7 @@ public class Enemy1 : MonoBehaviour
     public KeyCode space;
 
     Rigidbody2D enemy;
-
+    RigidbodyConstraints2D ogconstraints;
     [SerializeField] private Transform _player;
     [SerializeField] GameObject player;
     GameObject eManager;
@@ -18,6 +18,7 @@ public class Enemy1 : MonoBehaviour
     bool aggressive;
     bool angry;
     bool scared; //if player has katana, causes them to run
+    bool lostPlayer;
     float moveTimerReset = 0;
     int moveType;
 
@@ -33,6 +34,7 @@ public class Enemy1 : MonoBehaviour
         player = GameObject.Find("Player");
         _player = player.transform;
         MoveReset();
+        ogconstraints = enemy.constraints;
     }
 
     void Update()
@@ -45,6 +47,13 @@ public class Enemy1 : MonoBehaviour
             scared = true;
         else
             scared = false;
+        if (player.GetComponent<PlayerState>().smokebombTime > 0.0f)
+        {
+            lostPlayer = true;
+            //PlayerTeleported();
+        }
+        if(player.GetComponent<PlayerState>().smokebombTime <= 0.0f)
+            lostPlayer = false;
 
         enemy.velocity = Vector2.zero;
         if (!scared)
@@ -91,11 +100,18 @@ public class Enemy1 : MonoBehaviour
     }
     void FixedUpdate()
     {
-        moveTimerReset+=1.0f * Time.deltaTime;
-        if (moveTimerReset >= 3)
+        if (lostPlayer)
         {
-            MoveReset();
-            moveTimerReset = 0;
+            enemy.velocity = new Vector2(0, 0);
+        }
+        else
+        {
+            moveTimerReset += 1.0f * Time.deltaTime;
+            if (moveTimerReset >= 3)
+            {
+                MoveReset();
+                moveTimerReset = 0;
+            }
         }
     }
 
@@ -184,9 +200,20 @@ public class Enemy1 : MonoBehaviour
 
     }
 
+   /* 
+    * void PlayerTeleported()
+    {
+        if (lostPlayer)
+        {
+            enemy.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+        }
+            enemy.constraints = ogconstraints;
+    }
+   */
+
     void OnCollisionEnter2D(Collision2D collide)
     {
-        if (!scared /* && lostPlayer (player teleported) */)
+        if (!scared && !lostPlayer)
         {
             if (collide.gameObject.GetComponent<PlayerScript>() != null)
                 player.GetComponent<HealthScript>().TakeDamage(1);

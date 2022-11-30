@@ -53,12 +53,12 @@ public class PlayerState : MonoBehaviour
         }
         if (smokebombTime >= 0.0f)
         {
-
+            //enemyManagerRef.GetComponent<EnemyManager>().FreezeChildren();
+            smokebombTime -= 1.0f * Time.deltaTime;
         }
         if (swordTime >= 0.0f)
-        {
             swordTime -= 1.0f * Time.deltaTime;
-        }
+            
                 
         if (Input.GetKey(KeyCode.Space) && heldPowerUp != "none")
         {
@@ -96,7 +96,7 @@ public class PlayerState : MonoBehaviour
     void SmokeBomb()
     {
         scriptRef.TeleportPlayer();
-        smokebombTime = 8.0f;
+        smokebombTime = 3.0f;
     }
 
     void TombStone()
