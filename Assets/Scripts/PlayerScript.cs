@@ -183,11 +183,23 @@ public class PlayerScript : MonoBehaviour
             animator.speed.Equals(-1f);
         }
     }
-
-    void KatanaAnimation()
+    /*
+    public void WagonWheelAnimation()
     {
+        if (gun.wagonwheel == true)
+        {
+            animator.SetBool("movingRight", false);
+            animator.SetBool("movingLeft", false);
+            animator.SetBool("movingUp", false);
+            animator.SetBool("movingDown", false);
 
+            animator.SetBool("wagonTime", true);
+        }
+
+            animator.SetBool("wagonTime", false);
+            ChangeAnimation();
     }
+    */
 
     public void TeleportPlayer()
     {

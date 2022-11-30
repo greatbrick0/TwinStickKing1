@@ -11,6 +11,7 @@ public class PlayerState : MonoBehaviour
     public PlayerScript scriptRef;
     public GunScript gun;//for sake of testing
     public AudioSource powerUpSound;
+    public Animator animator;
     public int badges = 0;
     public string heldPowerUp = "none";
 
@@ -42,14 +43,16 @@ public class PlayerState : MonoBehaviour
             scriptRef.moveSpeedMod *= 2.0f;
             speedBoostTime -= 1.0f * Time.deltaTime;
         }
-        if(octoShotTime >= 0.0f)
+        if(octoShotTime > 0.0f)
         {
             gun.wagonwheel = true;
             octoShotTime -= 1.0f * Time.deltaTime;
+            animator.SetBool("wagonTime", true);
         }
         else
         {
             gun.wagonwheel = false;
+            animator.SetBool("wagonTime", false);
         }
         if (smokebombTime >= 0.0f)
         {
