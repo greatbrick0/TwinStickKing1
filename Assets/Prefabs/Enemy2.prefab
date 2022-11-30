@@ -113,8 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eManRef: {fileID: 0}
   frames:
-  - {fileID: 21300000, guid: fc539328fb53f384192769cd041a63c0, type: 3}
-  - {fileID: 21300000, guid: e234f58b7bff05f4bbe38041c66d6b5f, type: 3}
+  - {fileID: 21300000, guid: 9cc9f1deaffa92a42a81fc4ade277025, type: 3}
+  - {fileID: 21300000, guid: 1bc53b1bdbee4b64381b77cdc0bd7894, type: 3}
   frameTime: 0.4
 --- !u!114 &-8793895201110669416
 MonoBehaviour:
@@ -205,8 +205,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e234f58b7bff05f4bbe38041c66d6b5f, type: 3}
-  m_Color: {r: 0.5951747, g: 0.94509804, b: 0.54509807, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1bc53b1bdbee4b64381b77cdc0bd7894, type: 3}
+  m_Color: {r: 0.6855976, g: 0.590337, b: 0.97900003, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
