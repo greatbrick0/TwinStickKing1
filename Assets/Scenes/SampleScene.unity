@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &86029524
 RectTransform:
   m_ObjectHideFlags: 0
@@ -232,11 +232,14 @@ MonoBehaviour:
   imageBox: {fileID: 1502484039}
   healthText: {fileID: 645917723}
   coinText: {fileID: 703969419}
-  SB: {fileID: 21300000, guid: d6fefdfe62923744dba175fc53ceaf96, type: 3}
-  HMG: {fileID: 21300000, guid: c8e12e661c12a44489c614746374ce50, type: 3}
-  SG: {fileID: 21300000, guid: 7ba1ec13858a6cd4db4184bbde5378b4, type: 3}
-  C: {fileID: 21300000, guid: eb494b424c5f32747bfd752a5dbc845a, type: 3}
-  WW: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  kitSprite: {fileID: 21300000, guid: d6fefdfe62923744dba175fc53ceaf96, type: 3}
+  machineGunSprite: {fileID: 21300000, guid: c8e12e661c12a44489c614746374ce50, type: 3}
+  shotGunSprite: {fileID: 21300000, guid: 7ba1ec13858a6cd4db4184bbde5378b4, type: 3}
+  needleSprite: {fileID: 21300000, guid: eb494b424c5f32747bfd752a5dbc845a, type: 3}
+  octoSprite: {fileID: 21300000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
+  nukeSprite: {fileID: 21300000, guid: bd5fdc6ad48b0d546934514653e57e7d, type: 3}
+  teleSprite: {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
+  swordSprite: {fileID: -458924488, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   mgRef: {fileID: 1547083532}
 --- !u!4 &99909918
 Transform:
@@ -1443,10 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d06a23e08bdd841825ffa08e0bfb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy:
-  - {fileID: 1816768419623509825, guid: 58e0b217ccad978428016957f8bbb640, type: 3}
-  - {fileID: 1816768419623509825, guid: 3716ba6af6aa9a34aa6d4c6de8a9dfff, type: 3}
-  - {fileID: 1816768419623509825, guid: 7ba11712ccaa58a488487741ce4158bc, type: 3}
+  enemyManagerRef: {fileID: 1572718919}
   powerUps: []
   scriptRef: {fileID: 1028864222}
   gun: {fileID: 1028864225}
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   d: 32
   arenaTravelDuration: 4
   shopLevels: 000000000100000003000000
-  coinAmount: 0
+  coinAmount: 700
   liveAmount: 3
 --- !u!1 &1572718917
 GameObject:
@@ -2613,6 +2613,9 @@ MonoBehaviour:
   - {fileID: 7611189522604321173, guid: 62655e6a0224fed4ba1a4507dabfbbfc, type: 3}
   - {fileID: 1808254808171289640, guid: 0ac433ce0fe421b46aa5b7d6751b11a5, type: 3}
   - {fileID: 7225985542192010046, guid: 009ad0395fd3a0243a75ed31f7733127, type: 3}
+  - {fileID: 7334812506956408891, guid: 96cd29da184b03b41a077dcee5c3ffe0, type: 3}
+  - {fileID: 6188509413418395636, guid: a1c2fcb5b106e914e8f21debd43420c6, type: 3}
+  - {fileID: 4942686715820794850, guid: d16cb7a558132d74d97a40c8c953e1c2, type: 3}
   enemies:
   - {fileID: 1816768419623509825, guid: 58e0b217ccad978428016957f8bbb640, type: 3}
   - {fileID: 1816768419623509825, guid: 3716ba6af6aa9a34aa6d4c6de8a9dfff, type: 3}

@@ -6,7 +6,7 @@ using UnityEditor;
 
 public class PlayerState : MonoBehaviour
 {
-    public GameObject [] enemy;
+    public EnemyManager enemyManagerRef;
     public string [] powerUps = new string [5];
     public PlayerScript scriptRef;
     public GunScript gun;//for sake of testing
@@ -85,17 +85,7 @@ public class PlayerState : MonoBehaviour
 
     void ScreenNuke()
     {
-        GameObject.Find("EnemyManager").GetComponent<EnemyManager>().KillChildren();
-        /*for (int i = 0; i <= 2; i++)      Not sure what any of this is. im just gunna blow everyone up with enemyManager.
-        {
-            if (enemy[i].GetComponentInChildren<SpriteRenderer>().isVisible)
-            {
-                enemy[i].GetComponent<HealthScript>().TakeDamage(3);
-                print($" enemy health: {enemy[i].GetComponent<HealthScript>().health}");
-            }
-            print(i);
-        } */
-        
+        enemyManagerRef.KillChildren();
     }
 
     void Shotgun()
