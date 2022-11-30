@@ -242,7 +242,7 @@ MonoBehaviour:
   needleSprite: {fileID: 21300000, guid: eb494b424c5f32747bfd752a5dbc845a, type: 3}
   octoSprite: {fileID: 21300000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
   nukeSprite: {fileID: 21300000, guid: bd5fdc6ad48b0d546934514653e57e7d, type: 3}
-  teleSprite: {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
+  teleSprite: {fileID: 21300000, guid: ce25a418c4808614892f389046e12174, type: 3}
   swordSprite: {fileID: -458924488, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   mgRef: {fileID: 1547083532}
   speedUP:
