@@ -112,7 +112,7 @@ public class ShopScript : MonoBehaviour
 
     public void CloseShop()
     {
-        print("shop closed");
+        //print("shop closed");
         RemoveUpgrades();
         state = "ascend";
         stateDuration = 0.0f;

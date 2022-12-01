@@ -203,9 +203,10 @@ public class EnemyManager : MonoBehaviour
 
     public void SetBossSpawnLocationInfo()
     {
-            spawnPos[0] = new Vector2(-6.0f, (-d * 4) + 8);
-            spawnPos[1] = new Vector2(6.0f, (d * 4) + 8);
-            spawnPos[2] = new Vector2(0.0f, (d * 4) -7);
+            spawnPos[0] = new Vector2(-6.0f, (-d * 5) + 8);
+            spawnPos[1] = new Vector2(6.0f, (d * 5) + 8);
+            spawnPos[2] = new Vector2(0.0f, (d * 5) -7);
+        print("spawnPos[0] " + spawnPos[0]);
     }
 
     

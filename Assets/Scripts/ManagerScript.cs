@@ -166,7 +166,7 @@ public class ManagerScript : MonoBehaviour
 
     void StartNewArena()
     {
-        if(currentArena == storedWaves.Count)
+        if(currentArena == 4)
         {
             //start boss
             enemyManager.SetBossSpawnLocationInfo();

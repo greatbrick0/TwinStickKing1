@@ -96,7 +96,7 @@ public class UpgradePickUp : MonoBehaviour
 
     void ApplyStatUpgrade(PlayerScript playerRef)
     {
-        print(statType);
+        //print(statType);
         if(statType == "speed")
         { // player speed starts at 3
             playerRef.baseSpeed += 1.2f;
