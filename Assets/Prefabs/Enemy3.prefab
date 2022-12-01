@@ -137,6 +137,7 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 4
   animator: {fileID: 8641303007840275933}
+  floorVal: 0
   spriteList:
   - {fileID: -1067257963, guid: fe40680e372f7654c8933540488e5fad, type: 3}
   - {fileID: 1804554999, guid: fe40680e372f7654c8933540488e5fad, type: 3}
@@ -256,7 +257,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1067257963, guid: fe40680e372f7654c8933540488e5fad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6423727, g: 0.54645777, b: 0.9433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
