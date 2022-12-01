@@ -196,7 +196,7 @@ public class ManagerScript : MonoBehaviour
     public void FindAndMoveArenas()
     {
         DeleteShop();
-        MoveArenas(new Vector2(0.5f, ((currentArena + 1) * -d) - 0.5f), new Vector2(0, (currentArena + 1) * -d), new Vector3(102, 11, 19 + (currentArena+1)*d*e));
+        MoveArenas(new Vector2(0.5f, ((currentArena + 1) * -d) - 0.5f), new Vector2(0, (currentArena + 1) * -d), new Vector3(102, 11, 17 + (currentArena+1)*d*e));
     }
 
     void SpawnShop()
