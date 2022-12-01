@@ -1,0 +1,959 @@
+fileFormatVersion: 2
+guid: e453ac465b6052a4c8c6fe0507c1ebbd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: new John Animation Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443f59324bc6a044e9474d903e8657ad
+      internalID: 2080540197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 86
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587298acef0ed15498bc7b717ce6fe13
+      internalID: -640094027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 103
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0226e20b81ebff4dafbb4fc003bd9a2
+      internalID: -181560968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 86
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c403724eea83f8945bd9bc31cc15bdd8
+      internalID: 1694398783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 79
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22da95605aa71c4c960af50b8b2501e
+      internalID: -567571580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 79
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e4403405861ab498c1e9c713efae51
+      internalID: -1933179326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_6
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 79
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5701968cab67840a2d487ec3433dcf
+      internalID: -873563355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_7
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 79
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 313b453285d99c74695ef756115b0def
+      internalID: 56047712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 79
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c15ecaebb9f2f49af75d1cb4417096
+      internalID: -2120591166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 79
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12acf14d642e0264cb34b99464164532
+      internalID: -1536616719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 91
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4261324173c25474395ecc38e731c5de
+      internalID: -1261349126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 88
+        width: 22
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f116ea2abb9691469a55cf2d06ffa35
+      internalID: -885325470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 41
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6eff3f1c0f7bac4aa142e8f9e152a26
+      internalID: 709227014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 41
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928009c17a2bf1e47a6c48bd4f694f9f
+      internalID: -323425475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 42
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114d959d34c76a34ea2cda4eebac29b6
+      internalID: -1641010506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 41
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cfe8773ae06e748bdc02a7c1ec16d0
+      internalID: -2069251083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 41
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bf40be8cb521a4193ee94eb537084f
+      internalID: 156341228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_17
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 42
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2fbf56691d841428cb35b11de9f879
+      internalID: -496766463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 40
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf5ddb54e2cd5746a865f3ffbcc3158
+      internalID: -1593701592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 40
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33448d30c69a92a40aff8eba3e4597b7
+      internalID: -1757259792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_20
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 40
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc7fe814331c4d4fbe4ecb01e80bfcf
+      internalID: -1687985404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_21
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 41
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05de85f1dbd30b459999b4ebacc2b9b
+      internalID: 1779731330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_22
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 41
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08107eb1661acb54dbcbf44f496da1e4
+      internalID: -1673211421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_23
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 41
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24b20db0f3c193489120ccd7bae7e3b
+      internalID: 1102191427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_24
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 40
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0082a16dd5307314fb0dd0ceed7d6270
+      internalID: 1261339920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_25
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cf403f2df176040bd3d3735556e456
+      internalID: -713094526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 6
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1891fc5a020a64a8c24ba8e74788d5
+      internalID: -1016861895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_27
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 6
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8290c9f7890bf4695e4a2c8b91a623
+      internalID: -1054543504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_28
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 6
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4778e23aa8857e14c883c9b68eef1c1d
+      internalID: 488269498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_29
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 6
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ce5a8c6dd92c048b3396c5ecd48812
+      internalID: -917574423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_30
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 6
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22dce560f8ae3444bb3da8083994bb0
+      internalID: -942359056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_31
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 6
+        width: 46
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8735a8922e0d26f4fb72b00c7f9802cd
+      internalID: -1056295202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_32
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 6
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1e12a2abe8c4944a6c1695811d7aad
+      internalID: -1140509183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_33
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 6
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8beea2b2b92d0a4ca1af4d28ba98842
+      internalID: 1278371977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_34
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 6
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2614b875eca6f2744b6f20dc25dae860
+      internalID: 615638402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_35
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 6
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a49c9dc6fe847a4298072aaf960e4af
+      internalID: 472617239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_36
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 5
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9567a266e9c15e04985d494ae7f407f0
+      internalID: 1012447136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new John Animation Sprites_37
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 5
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f51ed674bf703f4f91e794472c43c14
+      internalID: -624019488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      new John Animation Sprites_32: -1140509183
+      new John Animation Sprites_15: -2069251083
+      new John Animation Sprites_12: 709227014
+      new John Animation Sprites_4: -567571580
+      new John Animation Sprites_8: -2120591166
+      new John Animation Sprites_28: 488269498
+      new John Animation Sprites_35: 472617239
+      new John Animation Sprites_14: -1641010506
+      new John Animation Sprites_29: -917574423
+      new John Animation Sprites_34: 615638402
+      new John Animation Sprites_33: 1278371977
+      new John Animation Sprites_1: -640094027
+      new John Animation Sprites_6: -873563355
+      new John Animation Sprites_16: 156341228
+      new John Animation Sprites_30: -942359056
+      new John Animation Sprites_23: 1102191427
+      new John Animation Sprites_26: -1016861895
+      new John Animation Sprites_27: -1054543504
+      new John Animation Sprites_20: -1687985404
+      new John Animation Sprites_25: -713094526
+      new John Animation Sprites_10: -1261349126
+      new John Animation Sprites_21: 1779731330
+      new John Animation Sprites_5: -1933179326
+      new John Animation Sprites_2: -181560968
+      new John Animation Sprites_36: 1012447136
+      new John Animation Sprites_7: 56047712
+      new John Animation Sprites_9: -1536616719
+      new John Animation Sprites_13: -323425475
+      new John Animation Sprites_0: 2080540197
+      new John Animation Sprites_11: -885325470
+      new John Animation Sprites_18: -1593701592
+      new John Animation Sprites_19: -1757259792
+      new John Animation Sprites_24: 1261339920
+      new John Animation Sprites_17: -496766463
+      new John Animation Sprites_37: -624019488
+      new John Animation Sprites_31: -1056295202
+      new John Animation Sprites_3: 1694398783
+      new John Animation Sprites_22: -1673211421
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

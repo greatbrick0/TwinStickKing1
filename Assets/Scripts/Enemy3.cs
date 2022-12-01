@@ -19,6 +19,7 @@ public class Enemy3 : MonoBehaviour
     //bool aggressive;
     //bool angry;
     bool scared; //if player has katana, causes them to run
+    bool lostPlayer;
     float moveTimerReset = 0;
     int moveType;
     bool frozen;
@@ -52,6 +53,11 @@ public class Enemy3 : MonoBehaviour
             scared = true;
         else
             scared = false;
+
+        if (player.GetComponent<PlayerState>().smokebombTime > 0.0f)
+            lostPlayer = true;
+        else
+            lostPlayer = false;
 
         enemy.velocity = Vector2.zero;
         if (moveTimerReset > 0.0f)
@@ -95,6 +101,10 @@ public class Enemy3 : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if(lostPlayer)
+        {
+            enemy.velocity = new Vector2(0, 0);
+        }
     }
     
     void MovePassive()
@@ -149,13 +159,17 @@ public class Enemy3 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collide)
     {
-        if(collide.gameObject.GetComponent<PlayerScript>() != null)
+        if (!scared && !lostPlayer)
         {
-            if (player.GetComponent<PlayerState>().swordTime <= 0.0f)
+            if (collide.gameObject.GetComponent<PlayerScript>() != null)
                 player.GetComponent<HealthScript>().TakeDamage(1);
-            else
-                GetComponent<HealthScript>().TakeDamage(10);
         }
+        else if (scared)
+        {
+            if (collide.gameObject.GetComponent<PlayerScript>() != null)
+                this.gameObject.GetComponent<HealthScript>().TakeDamage(10);
+        }
+        //
     }
 
     void PlaySitAnimation()

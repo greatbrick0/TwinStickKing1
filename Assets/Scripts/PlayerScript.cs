@@ -6,7 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     public List<AudioSource> playerSounds;
     public Animator animator;
-
+    public ManagerScript mgRef;
     Rigidbody2D body;
     GameObject enemy;
     GunScript gun;
@@ -183,18 +183,31 @@ public class PlayerScript : MonoBehaviour
             animator.speed.Equals(-1f);
         }
     }
-
-    void KatanaAnimation()
+    /*
+    public void WagonWheelAnimation()
     {
+        if (gun.wagonwheel == true)
+        {
+            animator.SetBool("movingRight", false);
+            animator.SetBool("movingLeft", false);
+            animator.SetBool("movingUp", false);
+            animator.SetBool("movingDown", false);
 
+            animator.SetBool("wagonTime", true);
+        }
+
+            animator.SetBool("wagonTime", false);
+            ChangeAnimation();
     }
+    */
 
     public void TeleportPlayer()
     {
-        float[] numbers = new float[] {0f, 3f, -3f};
-        float xPos = numbers[Random.Range(0, 2)];
-        float yPos = numbers[Random.Range(0, 2)];
-        body.position = new Vector2(xPos, yPos);
+        float[] xnumbers = new float[] {-3.5f, 4.5f};
+        float[] ynumbers = new float[] {-5.5f, 1.5f};
+        float xPos = xnumbers[Random.Range(0, 2)];
+        float yPos = ynumbers[Random.Range(0, 2)];
+        body.position = new Vector2(xPos, yPos - 32 * mgRef.currentArena);
         Debug.Log(body.position);
     }
 

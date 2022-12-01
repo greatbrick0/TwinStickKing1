@@ -130,6 +130,22 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    /*public void FreezeChildren()
+    {
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            if (playerRef.GetComponent<PlayerState>().smokebombTime > 0.0f)
+            {
+                print("lost player");
+                enemies[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            }
+            //if (playerRef.GetComponent<PlayerState>().smokebombTime <= 0.0f)
+            //{
+            //    enemies[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+            //}
+        }
+    }*/
+
     public void DestroyChildren() //Trigger this on player death, plz
     {
         alive = 0;

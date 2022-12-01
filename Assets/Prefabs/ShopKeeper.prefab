@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1529411417005844952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2217992800635382370}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.0036325455, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 49bc58586aec388499c70214f95ff2d3, type: 3}
+  m_Color: {r: 0.6423727, g: 0.54645777, b: 0.9433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -131,6 +131,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeObj: {fileID: 4134115015375295518, guid: f930aaffafd172040993eabcb0904f6f, type: 3}
+  droneSprites:
+  - {fileID: 21300000, guid: 49bc58586aec388499c70214f95ff2d3, type: 3}
+  - {fileID: 21300000, guid: e22ae188c98d3ca4187ea325a6b204f0, type: 3}
+  - {fileID: 21300000, guid: d0922ec4e5ae3d349bb0b52070991439, type: 3}
+  - {fileID: 21300000, guid: e22ae188c98d3ca4187ea325a6b204f0, type: 3}
   state: descend
   flySpeed: 5
   flyAccel: 1.6

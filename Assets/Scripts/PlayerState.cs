@@ -10,7 +10,9 @@ public class PlayerState : MonoBehaviour
     public string [] powerUps = new string [5];
     public PlayerScript scriptRef;
     public GunScript gun;//for sake of testing
+    public ParticleSystem particle;
     public AudioSource powerUpSound;
+    public Animator animator;
     public int badges = 0;
     public string heldPowerUp = "none";
 
@@ -42,14 +44,16 @@ public class PlayerState : MonoBehaviour
             scriptRef.moveSpeedMod *= 2.0f;
             speedBoostTime -= 1.0f * Time.deltaTime;
         }
-        if(octoShotTime >= 0.0f)
+        if(octoShotTime > 0.0f)
         {
             gun.wagonwheel = true;
             octoShotTime -= 1.0f * Time.deltaTime;
+            animator.SetBool("wagonTime", true);
         }
         else
         {
             gun.wagonwheel = false;
+            animator.SetBool("wagonTime", false);
         }
         if (smokebombTime >= 0.0f)
         {
@@ -58,7 +62,14 @@ public class PlayerState : MonoBehaviour
         if (swordTime >= 0.0f)
         {
             swordTime -= 1.0f * Time.deltaTime;
+            particle.gameObject.SetActive(true);
         }
+        else
+        {
+            particle.gameObject.SetActive(false);
+        }
+            
+            
                 
         if (Input.GetKey(KeyCode.Space) && heldPowerUp != "none")
         {
@@ -96,7 +107,7 @@ public class PlayerState : MonoBehaviour
     void SmokeBomb()
     {
         scriptRef.TeleportPlayer();
-        smokebombTime = 8.0f;
+        smokebombTime = 3.0f;
     }
 
     void TombStone()
