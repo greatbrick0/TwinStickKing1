@@ -10,6 +10,7 @@ public class PlayerState : MonoBehaviour
     public string [] powerUps = new string [5];
     public PlayerScript scriptRef;
     public GunScript gun;//for sake of testing
+    public ParticleSystem particle;
     public AudioSource powerUpSound;
     public Animator animator;
     public int badges = 0;
@@ -60,7 +61,15 @@ public class PlayerState : MonoBehaviour
             smokebombTime -= 1.0f * Time.deltaTime;
         }
         if (swordTime >= 0.0f)
+        {
             swordTime -= 1.0f * Time.deltaTime;
+            particle.gameObject.SetActive(true);
+        }
+        else
+        {
+            particle.gameObject.SetActive(false);
+        }
+            
             
                 
         if (Input.GetKey(KeyCode.Space) && heldPowerUp != "none")
