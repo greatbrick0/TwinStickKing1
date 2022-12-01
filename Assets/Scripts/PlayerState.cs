@@ -13,6 +13,7 @@ public class PlayerState : MonoBehaviour
     public ParticleSystem particle;
     public AudioSource powerUpSound;
     public Animator animator;
+    public SpriteRenderer Shield;
     public int badges = 0;
     public string heldPowerUp = "none";
 
@@ -48,7 +49,12 @@ public class PlayerState : MonoBehaviour
         {
             gun.wagonwheel = true;
             octoShotTime -= 1.0f * Time.deltaTime;
+
             animator.SetBool("wagonTime", true);
+            animator.SetBool("movingRight", false);
+            animator.SetBool("movingLeft", false);
+            animator.SetBool("movingUp", false);
+            animator.SetBool("movingDown", false);
         }
         else
         {
@@ -61,16 +67,22 @@ public class PlayerState : MonoBehaviour
         }
         if (swordTime >= 0.0f)
         {
+            var tempColor = Shield.color;
+            tempColor.a = 120f;
+            Shield.color = tempColor;
+
             swordTime -= 1.0f * Time.deltaTime;
             particle.gameObject.SetActive(true);
+            
         }
         else
         {
+            var tempColor = Shield.color;
+            tempColor.a = 0f;
+            Shield.color = tempColor;
             particle.gameObject.SetActive(false);
         }
-            
-            
-                
+
         if (Input.GetKey(KeyCode.Space) && heldPowerUp != "none")
         {
             UsePowerUp(heldPowerUp);

@@ -1,0 +1,3006 @@
+fileFormatVersion: 2
+guid: 21832d94704615f49b207cfc10753680
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06868cafbb159e4fb28ea06532bf309
+      internalID: 2090170978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 487
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b308dab87bb35434280d03f9e9237604
+      internalID: 2141497148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 487
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5aae722ff747b0459cb86af92430305
+      internalID: 2135542675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 487
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98875aebd5cbddb489114d7783156e8e
+      internalID: -1925422232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 487
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a5c12c00cea224c80ed2ee72998a00
+      internalID: 1305939410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 491
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6947de1b79a11fc4786247e99b446ee2
+      internalID: 43244915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_6
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 491
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b9009503286ff46b0ab5c0b3767297
+      internalID: 1604897373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 480
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78548b6b3acd34d4d9a006f48c4f1a09
+      internalID: 1053419273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_8
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 454
+        width: 96
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3feec74da8b7d514f8e2397c337fa633
+      internalID: -1333097971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_9
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 454
+        width: 96
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b5bfaacee57dd428fe4d52f8525145
+      internalID: 394147656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_10
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 447
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a3b8889483c0144ae7afe316264029
+      internalID: -45422329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 447
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1918308821da9e49b157d29647d05d6
+      internalID: 1087705007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 447
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd323fde73cabf47b80b8da2d790b37
+      internalID: 823071199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_13
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 447
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad990ab7dcbeff24e9a4ec04afe04bb1
+      internalID: 1104614547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 447
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51d1ca48284a794aaf7a69e9400a4ae
+      internalID: -495730255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 414
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d5a03bccb515c4187c941fb7ae4aa1
+      internalID: 819938541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_16
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 427
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f800b1797422b0647920b6eb7eba2c15
+      internalID: 203383968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_17
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 421
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99a6abfdab90f54497f8a331b00cf04
+      internalID: 664165111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_18
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 414
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fe89df63ba60c4f946975897a43bd4
+      internalID: -499255303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_19
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 418
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcf57b20ba1d9b42b08ca1b601fcf38
+      internalID: 527817409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_20
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 421
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320344456b85815469d550060e3ba60c
+      internalID: -390126769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_21
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 414
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70c811bbd91f1344a8e288dc7b54e20
+      internalID: 857202113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_22
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 414
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12a3df9f6ebc5f4d90c6264df06a4f5
+      internalID: 147183840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_23
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 418
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b170edd6c7749bf4aa7fcab0cdc43d88
+      internalID: 735633877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_24
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 418
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90654914669aaf439b166da47b9b60b
+      internalID: -1009059562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_25
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 418
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11e82d5daf09cf40babfb9172d8aea9
+      internalID: -220699584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_26
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 418
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abe3086aae1a86419aca2ac71fc25fa
+      internalID: -1190493227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_27
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 418
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24967840df67beb40883d110aff8204e
+      internalID: -645399995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_28
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 418
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a864cc1e7330c9a409ff78dea8491fe2
+      internalID: 34068263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_29
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 402
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5a1109e24505c4985e169d105fdb66
+      internalID: 1438857540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_30
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 392
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31467dc91f10714cb5e60afd93a05c8
+      internalID: -28652972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_31
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 404
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5587eccf9365c1b48af80f931b2f683a
+      internalID: 2121241937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_32
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 403
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72738379f3c4a564da4d142c28ff82ba
+      internalID: 1591915271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_33
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 398
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25583ad334e9b044db3b43a0ae04aeab
+      internalID: -1476788062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_34
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 392
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da78fa1f5b93d44294128de973a6322
+      internalID: -35375509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_35
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 404
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2cee5ce72bff4d4e919a8cd32e1288e
+      internalID: 1928422721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_37
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 386
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741fad176063d404aa387bb132b776a2
+      internalID: 329356692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_38
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 387
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c2ce11c9b5097418c35f65179933e1
+      internalID: 702530915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_39
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 387
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155aa3c6dd284f749a04a1a3f06ba0dd
+      internalID: 70113882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_40
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 387
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1a2ec356d2c404fb81a1821d0af6b5
+      internalID: -1317383252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_41
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 393
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb07a962d44b764b9a4c8696ee6cf0c
+      internalID: 240444298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_42
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 388
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d6bb206d6ca5f4a8ef48fe5b09d382
+      internalID: -1345111334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_43
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 388
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4354db75d618ad4ca9cc4c9b28ede4f
+      internalID: 668386401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_44
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 388
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79aa74efdae72f24388aa8e8a15073f6
+      internalID: -132976269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_45
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 388
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0526c604fae26974b8fc923b7d4e5738
+      internalID: -1789221745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_46
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 392
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4350814aa2d510144b4ed737a1b56112
+      internalID: 2007182976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_47
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 398
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66dc756630804bf4dbaea73edaebf457
+      internalID: -1939369143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_48
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 396
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14ec88c55e65b84db19a2eb534adc47
+      internalID: -750211066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_49
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b04dfe59b120649b285cc2e04196fd
+      internalID: -2134190320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_50
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 392
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad355639fbc89b54a839d606481de152
+      internalID: -1666472477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_51
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 389
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8732d0dec7c6d9442b6c10f9be4640dc
+      internalID: 792436613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_52
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 390
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662622cf0a11cad469b9eb46a18b0913
+      internalID: 325812794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_53
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 391
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2315e27465125a54dafa957a1d6862fb
+      internalID: -1585851940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_54
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 385
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544860593de0afa48b9fd1b6d8083aaa
+      internalID: 1421720167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_55
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 388
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b734122b737bc046b52ae461987602b
+      internalID: 2056483425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_56
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 389
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79f1a3ca091fcd46aa982b6c9d730df
+      internalID: 2130869242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_57
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 390
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc96b88020788f4dbc9b870b82f4723
+      internalID: 789283083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_58
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 388
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf612c66ecdc211449be1af472c2936e
+      internalID: -1126506735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_59
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 387
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7e3c58efc3df1498906c737b121314
+      internalID: -276368887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_60
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 384
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f64d05b604b43418fcd4f948a59bc3
+      internalID: 943805173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_61
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 381
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a14096bd7eec424da11e16f72c5d8b3
+      internalID: 228281862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_62
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 381
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f56b9ddc4a61941a67c6c0d5622b0e
+      internalID: 189130051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_63
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 382
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838356fb92730a242a8c5dee03c704f8
+      internalID: 111674915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_64
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 381
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f5c0d01f7d00b48889115aa93781e6
+      internalID: -1605626455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_65
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 382
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa601aced179f94a9f881d4d4177ff2
+      internalID: -1761432272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_66
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 381
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718afaf3abdb72c4382c56bf57a1fa04
+      internalID: -2050027469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_67
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 382
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c202a8ddc79253439bcbff434627d79
+      internalID: 1397766708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_68
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 348
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ef9fdba3fd2c34cb2b155a713d978d
+      internalID: 1610762633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_69
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 357
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec20a5c9792d05845bb22aef9dcfaaee
+      internalID: 1278522529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_70
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 357
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d5412d4611d1948ad9d06eaf8896ca
+      internalID: 1768352803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_71
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 357
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 381af436c7ce9fe408d2b60d2bde3534
+      internalID: 1481174817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_72
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 348
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea20f37624dc4342a29a0eb8bbbdec1
+      internalID: -1825170103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_73
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 348
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0052a6e417069543acd86388e9c9409
+      internalID: 1740630080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_74
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 361
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc98abcf7d0d5849a78ce895a7ee726
+      internalID: 623031860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_75
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 348
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b9f3afb23588e4b8d3d22b121c0047
+      internalID: -1604383969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_76
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 353
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75144b9d770c2f5478424ff8fd9e5af9
+      internalID: -930224080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_77
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 353
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bc82a2737cca3479d1e076251ec9e8
+      internalID: -1136632904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_78
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 352
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e428a6d5bb1f73942b99c997b84f59c5
+      internalID: -1111786988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_79
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 355
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b85cd0a62a3214ab74ffaacdba2dcd
+      internalID: -205151644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_80
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 322
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e62e175586991478ee40e2370e8c76
+      internalID: 1284174585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_81
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 324
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce191127dbbdcd4ba36713b9e0f8155
+      internalID: -122417674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_82
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 324
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4445c152c4a7e44aa12016711a96ca
+      internalID: 733729632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_83
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 324
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bb5b7451b62b4459d9f7902f28888a
+      internalID: 653768540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_84
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 315
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab35627032e0524bb5143b71678d3bf
+      internalID: 1451880581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_85
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 328
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa315f5b34916a4ebc0fcfb7e9f1e6c
+      internalID: -844786897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_86
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 282
+        width: 21
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5da270ef4a1cb24d8425304de300b35
+      internalID: -666406027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_87
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 315
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db65474a38b048a4bb287ddb1c73f03a
+      internalID: -39333612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_88
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 315
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8dd985c39356844cabb18cd2cd7bef7
+      internalID: -141948929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_89
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 325
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4292309aac449cd4999217cdf90ac5a8
+      internalID: 1537229708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_90
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 323
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14431967e3dac54c9768d1be0625f91
+      internalID: 890209372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_91
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 286
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b420e8e41333cf449f97e6f63511fa8
+      internalID: 1267665735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_92
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 282
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef158750a16e1054a8b7aeeee4c16856
+      internalID: 1176508864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_93
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 295
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac44699af12c7e4da6447c27ba13213
+      internalID: 1955622725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_94
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 290
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83aa810c00d6d14dbb6c84905793806
+      internalID: 2164610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_95
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 290
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37b3fca3143a0b48b57315ee37a1e8a
+      internalID: 638530892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_96
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 290
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b690d26f5c04a294ab4797a5a00aa7cb
+      internalID: -560085326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_97
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 295
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eeb74f9d512e9e4e8d9386a661f4322
+      internalID: 1743018822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_98
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 282
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f158e5173767be443ac5b74b32686a63
+      internalID: 1060567236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_99
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 282
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fbc7c7c688d344aa52206485eb5851
+      internalID: -1942214092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_100
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 289
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e55e540a80ace649ae4e154f7915735
+      internalID: -1009282648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_101
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 291
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cb43c45834a494fa320af06aea7667
+      internalID: 652944033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_102
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 273
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8805ef98685ff264fb2f9fa651467ae3
+      internalID: 1279286912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_103
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 272
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c471b07dde14f4889ac2d929d6a92d
+      internalID: 873769356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_104
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 272
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c65349335d4484698b267eae51010f
+      internalID: -1937089117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_105
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 267
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486b827f4f2a1b640a377614673c77d4
+      internalID: 2039861270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_106
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 254
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c692ec07b5fe7dc488cf6d001dca1fd2
+      internalID: 1932039942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_107
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 255
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ab82f7739be6b46aba555fe169e51c
+      internalID: -1397630908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_108
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 256
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286dff02c5be3de46a99de624174846e
+      internalID: 1814554012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_109
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 257
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6974253b0e902341979fc099d1fe3f7
+      internalID: -1248671059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_110
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 257
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70e7b58b5ca4a44d9ae6106d3b9586d
+      internalID: -1853819476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_111
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 257
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca41b72201575324d82d01c7fc31698c
+      internalID: -147769038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_112
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 259
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e18d111008b174fac205ed6adbe76f
+      internalID: 1213710436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_113
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 260
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8896297b774780545917ba48bf586a04
+      internalID: -2022821707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_114
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 259
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8fcfffc4028df54eaa71286a313c1c3
+      internalID: -1013205926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_115
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 260
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7f1ce0c50469349aea616b9f08577c
+      internalID: -360335583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_116
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 260
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da0582223cb1344a83e6afa598424a6
+      internalID: 1867382460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_117
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 258
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb0c2d74e60af245bbde88a9b8d4e85
+      internalID: 545839238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_118
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 249
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ff24cca5acea645a9c42e1425cf3d7
+      internalID: -950278330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_119
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 249
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ff6476d9536044388b37e1f090a132
+      internalID: 1153221695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_120
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 249
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaeffd78dccb664288e881f7c66ab20
+      internalID: 447303027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_121
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 249
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2497fa1df4949a4888ae65dbf5dc20a
+      internalID: -881369663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_122
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 231
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c05b37b85dffe429bd291968b39955
+      internalID: -1653901084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_123
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 151
+        width: 129
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c069adfef2e649947a12b17d92fd554b
+      internalID: 1869914969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_124
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 216
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee1a5b81c102214c9e260ca541a94c8
+      internalID: 1943183379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_125
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 183
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adb9f5a85571a649ba2ee1c16bc24ff
+      internalID: -773337081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_126
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 150
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31a02b39a402a54c9d498805d3cee11
+      internalID: -1293104241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_127
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 222
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0efa9701b5aca428c05a1e3715afff
+      internalID: 732442876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_128
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 224
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b656b017aec52d42af0e286852f773e
+      internalID: -1157240408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_129
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 216
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72c2dceea599784090f6bf7df923d8d
+      internalID: 1729232148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_130
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 218
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280cb6c5a364aa74ca76e814ca26243d
+      internalID: 1980934064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_list_coppyyy_131
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 223
+        width: 96
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c56cb14a4abd074ba893dbcbf9b4959
+      internalID: -1438581245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sprite_list_coppyyy_18: -499255303
+      Sprite_list_coppyyy_109: -1248671059
+      Sprite_list_coppyyy_41: 240444298
+      Sprite_list_coppyyy_106: 1932039942
+      Sprite_list_coppyyy_120: 447303027
+      Sprite_list_coppyyy_32: 1591915271
+      Sprite_list_coppyyy_76: -930224080
+      Sprite_list_coppyyy_91: 1267665735
+      Sprite_list_coppyyy_38: 702530915
+      Sprite_list_coppyyy_42: -1345111334
+      Sprite_list_coppyyy_6: 1604897373
+      Sprite_list_coppyyy_110: -1853819476
+      Sprite_list_coppyyy_96: -560085326
+      Sprite_list_coppyyy_66: -2050027469
+      Sprite_list_coppyyy_63: 111674915
+      Sprite_list_coppyyy_98: 1060567236
+      Sprite_list_coppyyy_65: -1761432272
+      Sprite_list_coppyyy_60: 943805173
+      Sprite_list_coppyyy_15: 819938541
+      Sprite_list_coppyyy_86: -666406027
+      Sprite_list_coppyyy_112: 1213710436
+      Sprite_list_coppyyy_77: -1136632904
+      Sprite_list_coppyyy_126: -1293104241
+      Sprite_list_coppyyy_61: 228281862
+      Sprite_list_coppyyy_22: 147183840
+      Sprite_list_coppyyy_3: -1925422232
+      Sprite_list_coppyyy_29: 1438857540
+      Sprite_list_coppyyy_44: -132976269
+      Sprite_list_coppyyy_116: 1867382460
+      Sprite_list_coppyyy_70: 1768352803
+      Sprite_list_coppyyy_67: 1397766708
+      Sprite_list_coppyyy_27: -645399995
+      Sprite_list_coppyyy_9: 394147656
+      Sprite_list_coppyyy_14: -495730255
+      Sprite_list_coppyyy_11: 1087705007
+      Sprite_list_coppyyy_47: -1939369143
+      Sprite_list_coppyyy_24: -1009059562
+      Sprite_list_coppyyy_104: -1937089117
+      Sprite_list_coppyyy_5: 43244915
+      Sprite_list_coppyyy_56: 2130869242
+      Sprite_list_coppyyy_17: 664165111
+      Sprite_list_coppyyy_49: -2134190320
+      Sprite_list_coppyyy_80: 1284174585
+      Sprite_list_coppyyy_90: 890209372
+      Sprite_list_coppyyy_124: 1943183379
+      Sprite_list_coppyyy_25: -220699584
+      Sprite_list_coppyyy_34: -35375509
+      Sprite_list_coppyyy_52: 325812794
+      Sprite_list_coppyyy_131: -1438581245
+      Sprite_list_coppyyy_89: 1537229708
+      Sprite_list_coppyyy_62: 189130051
+      Sprite_list_coppyyy_1: 2141497148
+      Sprite_list_coppyyy_46: 2007182976
+      Sprite_list_coppyyy_108: 1814554012
+      Sprite_list_coppyyy_97: 1743018822
+      Sprite_list_coppyyy_78: -1111786988
+      Sprite_list_coppyyy_2: 2135542675
+      Sprite_list_coppyyy_99: -1942214092
+      Sprite_list_coppyyy_123: 1869914969
+      Sprite_list_coppyyy_37: 329356692
+      Sprite_list_coppyyy_117: 545839238
+      Sprite_list_coppyyy_16: 203383968
+      Sprite_list_coppyyy_53: -1585851940
+      Sprite_list_coppyyy_75: -1604383969
+      Sprite_list_coppyyy_45: -1789221745
+      Sprite_list_coppyyy_95: 638530892
+      Sprite_list_coppyyy_59: -276368887
+      Sprite_list_coppyyy_54: 1421720167
+      Sprite_list_coppyyy_107: -1397630908
+      Sprite_list_coppyyy_73: 1740630080
+      Sprite_list_coppyyy_103: 873769356
+      Sprite_list_coppyyy_33: -1476788062
+      Sprite_list_coppyyy_122: -1653901084
+      Sprite_list_coppyyy_129: 1729232148
+      Sprite_list_coppyyy_7: 1053419273
+      Sprite_list_coppyyy_12: 823071199
+      Sprite_list_coppyyy_35: 1928422721
+      Sprite_list_coppyyy_0: 2090170978
+      Sprite_list_coppyyy_68: 1610762633
+      Sprite_list_coppyyy_40: -1317383252
+      Sprite_list_coppyyy_55: 2056483425
+      Sprite_list_coppyyy_13: 1104614547
+      Sprite_list_coppyyy_71: 1481174817
+      Sprite_list_coppyyy_72: -1825170103
+      Sprite_list_coppyyy_30: -28652972
+      Sprite_list_coppyyy_128: -1157240408
+      Sprite_list_coppyyy_57: 789283083
+      Sprite_list_coppyyy_85: -844786897
+      Sprite_list_coppyyy_94: 2164610
+      Sprite_list_coppyyy_28: 34068263
+      Sprite_list_coppyyy_127: 732442876
+      Sprite_list_coppyyy_64: -1605626455
+      Sprite_list_coppyyy_74: 623031860
+      Sprite_list_coppyyy_36: -1593565527
+      Sprite_list_coppyyy_23: 735633877
+      Sprite_list_coppyyy_81: -122417674
+      Sprite_list_coppyyy_101: 652944033
+      Sprite_list_coppyyy_4: 1305939410
+      Sprite_list_coppyyy_93: 1955622725
+      Sprite_list_coppyyy_105: 2039861270
+      Sprite_list_coppyyy_83: 653768540
+      Sprite_list_coppyyy_26: -1190493227
+      Sprite_list_coppyyy_19: 527817409
+      Sprite_list_coppyyy_20: -390126769
+      Sprite_list_coppyyy_21: 857202113
+      Sprite_list_coppyyy_31: 2121241937
+      Sprite_list_coppyyy_118: -950278330
+      Sprite_list_coppyyy_119: 1153221695
+      Sprite_list_coppyyy_69: 1278522529
+      Sprite_list_coppyyy_111: -147769038
+      Sprite_list_coppyyy_125: -773337081
+      Sprite_list_coppyyy_130: 1980934064
+      Sprite_list_coppyyy_8: -1333097971
+      Sprite_list_coppyyy_48: -750211066
+      Sprite_list_coppyyy_115: -360335583
+      Sprite_list_coppyyy_43: 668386401
+      Sprite_list_coppyyy_10: -45422329
+      Sprite_list_coppyyy_79: -205151644
+      Sprite_list_coppyyy_88: -141948929
+      Sprite_list_coppyyy_100: -1009282648
+      Sprite_list_coppyyy_39: 70113882
+      Sprite_list_coppyyy_51: 792436613
+      Sprite_list_coppyyy_50: -1666472477
+      Sprite_list_coppyyy_82: 733729632
+      Sprite_list_coppyyy_102: 1279286912
+      Sprite_list_coppyyy_114: -1013205926
+      Sprite_list_coppyyy_92: 1176508864
+      Sprite_list_coppyyy_84: 1451880581
+      Sprite_list_coppyyy_113: -2022821707
+      Sprite_list_coppyyy_121: -881369663
+      Sprite_list_coppyyy_58: -1126506735
+      Sprite_list_coppyyy_87: -39333612
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
