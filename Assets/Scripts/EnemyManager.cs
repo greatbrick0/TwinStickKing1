@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyManager : MonoBehaviour
 {
     public GameObject playerRef;
@@ -22,6 +23,7 @@ public class EnemyManager : MonoBehaviour
     bool spawn; //used in fixedupdate to repeat the spawn if necissary
     int Floor = 0;
     float d = 1;
+    bool bossSpawned = false;
 
     void Start()
     {
@@ -38,6 +40,7 @@ public class EnemyManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         spawn = true;
         currentRoundTime += Time.deltaTime;
         UpdateTimerBar();
@@ -58,24 +61,29 @@ public class EnemyManager : MonoBehaviour
 
     public void SpawnEnemy(int ID)
     {
-        if (Floor == 4)
-        {
-            if(CheckWaveEnded())
-            {
-                EnemyWaveData(spawningDuration, enemySpawnData);
-            }
-        }
+        
         newSpawn = Instantiate(enemies[ID], this.transform);
+        
+
+        if (Floor != 4)
+        {
+            newSpawn.transform.position = spawnPos[UnityEngine.Random.Range(0, spawnPos.Count)];
+            
+        }
         if (Floor == 4)
         {
-            if (ID == 3)
-                newSpawn.transform.position = spawnPos[2];
-            else
-                newSpawn.transform.position = spawnPos[UnityEngine.Random.Range(0,2)];
+            newSpawn.transform.position = spawnPos[UnityEngine.Random.Range(0, 2)];
         }
-        else
-        newSpawn.transform.position = spawnPos[UnityEngine.Random.Range(0, spawnPos.Count)];
+        
         alive++;
+    }
+
+    public void SpawnBoss()
+    {
+        newSpawn = Instantiate(enemies[3], this.transform);
+        newSpawn.transform.position = new Vector2(0.0f, -133);
+        bossSpawned = true;
+  
     }
 
     public int GetFloor()
@@ -116,7 +124,10 @@ public class EnemyManager : MonoBehaviour
 
     bool CheckWaveEnded()
     {
+        if (Floor != 4)
         return currentRoundTime >= spawningDuration && alive <= 0;
+        else
+        return currentRoundTime >= spawningDuration && alive <= 1;
     }
 
     public void KillChildren() 
@@ -205,7 +216,7 @@ public class EnemyManager : MonoBehaviour
     {
             spawnPos[0] = new Vector2(-7.5f, -122);
             spawnPos[1] = new Vector2(7.5f, -122);
-            spawnPos[2] = new Vector2(0.0f, -136);
+            spawnPos[2] = new Vector2(0.0f, -133);
        
     }
 
