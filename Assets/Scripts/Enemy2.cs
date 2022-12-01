@@ -14,6 +14,7 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] GameObject player;
     GameObject eManager;
     [SerializeField] float baseSpeed;
+    [SerializeField] public float floorVal;
     float speed;
     bool moving;
    // bool aggressive = true; //the bulky enemy is always angry! (does nothing)
@@ -28,7 +29,7 @@ public class Enemy2 : MonoBehaviour
     {
         speed = baseSpeed;
         eManager = GameObject.Find("EnemyManager");
-        Floor = new Vector2(0, 0 + (32 * eManager.GetComponent<EnemyManager>().GetFloor()));
+        Floor = new Vector2(0, 0 + (floorVal * eManager.GetComponent<EnemyManager>().GetFloor()));
         //aggressive = (UnityEngine.Random.Range(0, 4) == 0); //1/4 of enemies will always attack, as 'aggressive' enemies.
         enemy = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");

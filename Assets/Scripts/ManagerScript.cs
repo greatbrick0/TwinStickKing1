@@ -88,6 +88,8 @@ public class ManagerScript : MonoBehaviour
         storedWavesDuration.Add(094.1f);
         storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 00:003.6 00:003.0 00:002.4 00:001.4");
         storedWavesDuration.Add(012.8f);
+        storedWaves.Add("00:012.8 00:007.9 00:007.0 00:005.0 00:004.6 02:003.0 00:001.4");
+        storedWavesDuration.Add(012.8f);
 
         StartNewArena();
     }
@@ -167,7 +169,9 @@ public class ManagerScript : MonoBehaviour
         if(currentArena == storedWaves.Count)
         {
             //start boss
-            print("spawn boss");
+            enemyManager.SetBossSpawnLocationInfo();
+            enemyManager.SpawnEnemy(3);
+            enemyManager.EnemyWaveData(storedWavesDuration[currentArena], storedWaves[currentArena]);
         }
         else
         {

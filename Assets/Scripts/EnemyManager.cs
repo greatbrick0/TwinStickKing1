@@ -56,9 +56,24 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    void SpawnEnemy(int ID)
+    public void SpawnEnemy(int ID)
     {
+        if (Floor == 4)
+        {
+            if(CheckWaveEnded())
+            {
+                EnemyWaveData(spawningDuration, enemySpawnData);
+            }
+        }
         newSpawn = Instantiate(enemies[ID], this.transform);
+        if (Floor == 4)
+        {
+            if (ID == 3)
+                newSpawn.transform.position = spawnPos[2];
+            else
+                newSpawn.transform.position = spawnPos[UnityEngine.Random.Range(0,2)];
+        }
+        else
         newSpawn.transform.position = spawnPos[UnityEngine.Random.Range(0, spawnPos.Count)];
         alive++;
     }
@@ -72,11 +87,14 @@ public class EnemyManager : MonoBehaviour
     {
         Vector2 newLocation;
         Floor++;
-        for (int i=0; i<4; i++)
+        if (Floor != 4)
         {
-           newLocation = spawnPos[i];
-           newLocation.y = newLocation.y - (d);
-           spawnPos[i] = newLocation;
+            for (int i = 0; i < 4; i++)
+            {
+                newLocation = spawnPos[i];
+                newLocation.y = newLocation.y - (d);
+                spawnPos[i] = newLocation;
+            }
         }
     }
 
@@ -86,11 +104,14 @@ public class EnemyManager : MonoBehaviour
         //ex: "00:002.4 01:003.6 00:005.0 02:007.9"
         //different enemy spawns are seperated by spaces
         //the first part of each enemy spawn is the type of enemy, the second part is the time they spawn
-        currentRoundTime = 0f;
-        enemySpawnData = data;
-        spawningDuration = time;
-        string[] arr = data.Split(' ');
-        spawnDatArray = new Stack<string>(arr);
+       
+            
+                currentRoundTime = 0f;
+                enemySpawnData = data;
+                spawningDuration = time;
+                string[] arr = data.Split(' ');
+                spawnDatArray = new Stack<string>(arr);
+
     }
 
     bool CheckWaveEnded()
@@ -163,4 +184,13 @@ public class EnemyManager : MonoBehaviour
     {
         timerBarRef.GetChild(0).localScale = new Vector2(2, MathF.Min(currentRoundTime / spawningDuration, 1));
     }
+
+    public void SetBossSpawnLocationInfo()
+    {
+            spawnPos[0] = new Vector2(-6.0f, (-d * 4) + 8);
+            spawnPos[1] = new Vector2(6.0f, (d * 4) + 8);
+            spawnPos[2] = new Vector2(0.0f, (d * 4) -7);
+    }
+
+    
 }

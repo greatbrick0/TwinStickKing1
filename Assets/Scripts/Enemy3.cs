@@ -15,6 +15,7 @@ public class Enemy3 : MonoBehaviour
     [SerializeField] public float speed;
     bool moving;
     public Animator animator;
+    [SerializeField] public float floorVal;
     //bool aggressive;
     //bool angry;
     bool scared; //if player has katana, causes them to run
@@ -33,7 +34,7 @@ public class Enemy3 : MonoBehaviour
         GetComponent<EnemyScript>().isWalking = false;
         moveTimerReset = 4.0f;
         eManager = GameObject.Find("EnemyManager");
-        Floor = new Vector2(0, 0 + (32 * eManager.GetComponent<EnemyManager>().GetFloor()));
+        Floor = new Vector2(0, 0 + (floorVal * eManager.GetComponent<EnemyManager>().GetFloor()));
         rPosSelect = new Vector2(UnityEngine.Random.Range(-4f, 5f), UnityEngine.Random.Range(-4 + Floor.y, 5 + Floor.y)); //finds targer location on spawn
         enemy = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
