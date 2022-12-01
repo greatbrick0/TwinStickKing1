@@ -201,12 +201,12 @@ public class EnemyManager : MonoBehaviour
         timerBarRef.GetChild(0).localScale = new Vector2(2, MathF.Min(currentRoundTime / spawningDuration, 1));
     }
 
-    public void SetBossSpawnLocationInfo()
+    public void SetBossSpawnLocationInfo() //hardcoding it. fk it.
     {
-            spawnPos[0] = new Vector2(-6.0f, (-d * 5) + 8);
-            spawnPos[1] = new Vector2(6.0f, (d * 5) + 8);
-            spawnPos[2] = new Vector2(0.0f, (d * 5) -7);
-        print("spawnPos[0] " + spawnPos[0]);
+            spawnPos[0] = new Vector2(-7.5f, -122);
+            spawnPos[1] = new Vector2(7.5f, -122);
+            spawnPos[2] = new Vector2(0.0f, -136);
+       
     }
 
     
