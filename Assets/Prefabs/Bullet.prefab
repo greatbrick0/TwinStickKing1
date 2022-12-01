@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4427906958157206833}
   - component: {fileID: 601081252391182648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrangeBulletSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

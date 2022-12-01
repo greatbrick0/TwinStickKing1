@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class EnemyScript : MonoBehaviour
         {
             eManRef.GetComponent<EnemyManager>().spawnDrop(this.transform.position);
             eManRef.GetComponent<EnemyManager>().enemyDies(this.transform.position);
+            if (GetComponent<HealthScript>().maxHealth == 50)
+            {
+                eManRef.GetComponent<EnemyManager>().DestroyChildren();
+                SceneManager.LoadScene(2);
+            }
             Destroy(this.gameObject);
         }
 

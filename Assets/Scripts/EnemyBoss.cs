@@ -14,6 +14,7 @@ public class EnemyBoss: MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] GameObject player;
     GameObject eManager;
+    GameObject HealthBar;
     [SerializeField] public float speed;
     bool moving;
     float moveTimerReset = 0.0f;
@@ -32,9 +33,11 @@ public class EnemyBoss: MonoBehaviour
 
     void Start()
     {
+        GetComponent<EnemyScript>().isWalking = false;
         shotTime = 3.0f;
         shotCount = 0;
         eManager = GameObject.Find("EnemyManager");
+        HealthBar = GameObject.Find("BossHealthLine");
         Floor = new Vector2(0, 0 + (floorVal * eManager.GetComponent<EnemyManager>().GetFloor()));
         enemy = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player");
@@ -46,6 +49,7 @@ public class EnemyBoss: MonoBehaviour
 
     void Update()
     {
+
         if (shotTime <= 0.0f)
             Shoot();
         shotTime -= Time.deltaTime;
@@ -64,7 +68,7 @@ public class EnemyBoss: MonoBehaviour
                     break;
             }
         }
-        
+        HealthBar.transform.localScale = new Vector2(2,(float) GetComponent<HealthScript>().health / 50);
     }
 
     public void SetSpeed(float speed)
