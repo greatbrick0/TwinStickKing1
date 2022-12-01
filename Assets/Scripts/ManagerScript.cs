@@ -17,6 +17,7 @@ public class ManagerScript : MonoBehaviour
     public int currentArena = 0;
     public float d = 32;
 
+    public float e = 12;
     Vector2 currentArenaPos = Vector2.zero;
     Vector2 nextArenaPos;
     Vector2 playerTravelPreviousPos;
@@ -195,7 +196,7 @@ public class ManagerScript : MonoBehaviour
     public void FindAndMoveArenas()
     {
         DeleteShop();
-        MoveArenas(new Vector2(0.5f, ((currentArena + 1) * -d) - 0.5f), new Vector2(0, (currentArena + 1) * -d), new Vector3(102, 11, (currentArena+1)*d*11));
+        MoveArenas(new Vector2(0.5f, ((currentArena + 1) * -d) - 0.5f), new Vector2(0, (currentArena + 1) * -d), new Vector3(102, 11, 19 + (currentArena+1)*d*e));
     }
 
     void SpawnShop()
